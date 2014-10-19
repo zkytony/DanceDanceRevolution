@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\qaz2wsx3\Downloads\KAIYU ZHENG LAB8 NEW\KAIYU ZHENG LAB8 NEW\lab8\simulation\qsim
+vscore_counter
+Z1 !s100 4K4@zDTB>=j>S6Ua30IQE0
+Z2 I`Yh?]8B8KUm>`LQgUSD1N0
+Z3 VFjGB0fbSjlEUGmn0m3d>=2
+Z4 dC:\Users\qaz2wsx3\Downloads\KAIYU ZHENG LAB8 NEW\KAIYU ZHENG LAB8 NEW\lab8\simulation\qsim
+Z5 w1401476248
+Z6 8dancedance.vo
+Z7 Fdancedance.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|dancedance.vo|
+Z10 o-work work -O0
+Z11 !s108 1401476249.518000
+Z12 !s107 dancedance.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vscore_counter_vlg_check_tst
+Z13 I?<@12O6RORn2[PfFIcVKM3
+Z14 VZL9GhF]WhU@<g`R=S338O3
+R4
+R5
+Z15 8dancedance.vt
+Z16 Fdancedance.vt
+L0 63
+R8
+r1
+31
+Z17 !s108 1401476249.579000
+Z18 !s107 dancedance.vt|
+Z19 !s90 -work|work|dancedance.vt|
+R10
+Z20 !s100 =IlaHMBbB4BKUjo;GM[XM3
+!i10b 1
+!s85 0
+!s101 -O0
+vscore_counter_vlg_sample_tst
+Z21 !s100 DSL<eDhgBc?MIzaMB;ob<0
+Z22 IKU8O?TzHf`[:miPNzXB4n2
+Z23 V=ji;Q`CdY_[31O_WW3n?W1
+R4
+R5
+R15
+R16
+L0 29
+R8
+r1
+31
+R17
+R18
+R19
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vscore_counter_vlg_vec_tst
+Z24 ID^CdE`Ed]GQcmT_Q=Cl4i2
+Z25 VSkbfH=oz4cH?KePT2_^1Y2
+R4
+R5
+R15
+R16
+Z26 L0 265
+R8
+r1
+31
+R17
+R18
+R19
+R10
+Z27 !s100 :o5S96Lb<UG24o5<SgAgB2
+!i10b 1
+!s85 0
+!s101 -O0
+vscore_keep
+Z28 IfWEU2RKK_i5J^PjPKd2_=1
+Z29 VKPW]XIDHfiHdG:COHFC]02
+Z30 dC:\altera\13.0sp1\KAIYU ZHENG LAB8 NEW\KAIYU ZHENG LAB8 NEW\KAIYU ZHENG LAB8 NEW\lab8\simulation\qsim
+Z31 w1401487277
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+!i10b 1
+Z32 !s100 JU`kU1Y7XU2RRRbTcLF?S2
+!s85 0
+Z33 !s108 1401487280.554000
+R12
+!s101 -O0
+vscore_keep_vlg_check_tst
+!i10b 1
+!s100 =;]3E_;^WCN94bzzSlSPQ1
+I?@916Pz@E@_2jR@HjVKoW3
+V1Liz>45aO2o5OHKM?RQSU0
+R30
+Z34 w1401487276
+R15
+R16
+L0 67
+R8
+r1
+!s85 0
+31
+Z35 !s108 1401487280.963000
+Z36 !s107 dancedance.vt|
+R19
+!s101 -O0
+R10
+vscore_keep_vlg_sample_tst
+!i10b 1
+!s100 l@b^cKKHRO?TCDF??[jD[3
+I7E_=8CEMjdo30@MX5o_go2
+VC[ho12XgafmIUBnFXfkCm3
+R30
+R34
+R15
+R16
+L0 29
+R8
+r1
+!s85 0
+31
+R35
+R36
+R19
+!s101 -O0
+R10
+vscore_keep_vlg_vec_tst
+!i10b 1
+!s100 X6?R7^CajPm4Z<U1VheBa1
+In5N2i1Z<0^Q]P=nZPU[VQ0
+VP5Gl]Z44_zP=[M=nzT^=Z0
+R30
+R34
+R15
+R16
+L0 697
+R8
+r1
+!s85 0
+31
+R35
+R36
+R19
+!s101 -O0
+R10

@@ -1,0 +1,68 @@
+module bank (CLOCK_50, Reset, KEY, clk_SPD, LED, top_code, rgen, key);
+	input CLOCK_50, Reset, KEY;
+	input [4:0] clk_SPD;
+	//input [8:0] SW;
+	output [2:0] top_code;
+	output [4:0] LED;
+	output rgen;
+
+	//assign keylight = ~KEY;
+	
+	wire [31:0] clk;
+	wire [4:0] whichClock;
+	assign whichClock = ~clk_SPD;
+	
+	clock_divider divider (CLOCK_50, clk);
+	
+	//wire rgen;
+	//wire rgen_o;
+	random rdm (rgen, clk[whichClock], Reset);
+	//inputHandler hr (rgen, clk[whichClock], Reset, rgen_o);
+	
+	output key; // should be wire
+	inputHandler_double hk (~KEY, clk[whichClock], Reset, key);
+	
+	parameter [1:0] no_pt = 2'b00, pos_two = 2'b01, pos_one = 2'b10, neg_two = 2'b11;
+	parameter [2:0] no_sig = 3'b000, _0 = 3'b001, _1 = 3'b010, _2 = 3'b011, _3 = 3'b100, _4 = 3'b101;
+	
+	wire [1:0] pt_code0, pt_code1, pt_code2, pt_code3, pt_code4;
+	wire [2:0] pos_0, pos_1, pos_2, pos_3, pos_4;
+	
+	//wire [2:0] top_code;
+	top_decider td(top_code, pos_0, pos_1, pos_2, pos_3, pos_4, clk[whichClock], Reset);
+	
+	L0 l_0 (LED[0],  pt_code0, pos_0, clk[whichClock], Reset, rgen, top_code, ~KEY);
+	L1 l_1 (LED[1],  pt_code1, pos_1, clk[whichClock], Reset, LED[0], top_code, ~KEY);
+	L2 l_2 (LED[2],  pt_code2, pos_2, clk[whichClock], Reset, LED[1], top_code, ~KEY);
+	L3 l_3 (LED[3],  pt_code3, pos_3, clk[whichClock], Reset, LED[2], top_code, ~KEY);
+	L4 l_4 (LED[4],  pt_code4, pos_4, clk[whichClock], Reset, LED[3], top_code, ~KEY);
+	
+endmodule 
+
+module test_bank;
+	
+	reg clk, reset, key;
+	wire [4:0] led;
+	wire [4:0] SW;
+	wire [2:0] top_code;
+	wire rgen;
+	
+	parameter cc = 10;
+	
+	bank b (clk, reset, key, SW, led, top_code, rgen);
+	
+	always
+		#cc clk = ~clk;
+		
+	always
+		#(3*cc) key = ~key;
+	
+	initial
+	begin
+		reset = 1;
+		clk = 0;
+		key = 0;
+		#cc reset = 0;
+	end
+	
+endmodule 

@@ -1,0 +1,102 @@
+module counter_display(leds, Clock, win, reset);
+	input Clock, win, reset;
+	output [0:6] leds;
+	
+	wire [2:0] B;
+	counter_3b counter(B, Clock, win, reset);
+	seg7 seg7(B, leds);
+	
+endmodule
+
+module counter_3b (B, Clock, win, reset);
+	output [2:0] B;
+	input Clock, win, reset;
+	
+	wire [2:0] PS;
+	reg [2:0] NS;
+	reg [2:0] B;
+	
+	parameter [2:0] _0 = 3'b000,
+				 _1 = 3'b001,
+				 _2 = 3'b010,
+				 _3 = 3'b011,
+				 _4 = 3'b100,
+				 _5 = 3'b101,
+				 _6 = 3'b110,
+				 _7 = 3'b111;
+				 
+	
+	always @(win or PS)
+		case (PS)
+			_0: if (win == 1'b1) NS = _1; else NS = _0;
+			_1: if (win == 1'b1) NS = _2; else NS = _1;
+			_2: if (win == 1'b1) NS = _3; else NS = _2;
+			_3: if (win == 1'b1) NS = _4; else NS = _3;
+			_4: if (win == 1'b1) NS = _5; else NS = _4;
+			_5: if (win == 1'b1) NS = _6; else NS = _5;
+			_6: if (win == 1'b1) NS = _7; else NS = _6;
+			_7: NS = _7;
+			default: NS = 3'bxxx;
+		endcase
+		
+	always @(PS)
+		case(PS)
+			_0 : B = PS;
+			_1 : B = PS;
+			_2 : B = PS;
+			_3 : B = PS;
+			_4 : B = PS;
+			_5 : B = PS;
+			_6 : B = PS;
+		   _7 : B = PS;
+		endcase
+		
+	D_FF dff0(PS[0], NS[0], reset, Clock);
+	D_FF dff1(PS[1], NS[1], reset, Clock);
+	D_FF dff2(PS[2], NS[2], reset, Clock);
+	
+endmodule 
+
+module seg7(hex, leds);
+	input [2:0] hex;
+	output reg [7:1] leds;
+	
+	always @(hex)
+		case(hex) //abcdefg
+			0: leds=7'b1000000;
+			1: leds=7'b1111001;
+			2: leds=7'b0100100;
+			3: leds=7'b0110000;
+			4: leds=7'b0011001;
+			5: leds=7'b0010010;
+			6: leds=7'b0000010;
+			7: leds=7'b1111000;
+		endcase
+
+endmodule 
+
+module test;
+
+	reg clock, win,reset;
+	wire [6:0] leds;
+	
+	counter_display ct (leds, clock, win,reset);
+
+	parameter clock_cycle = 10;
+		
+	always
+		#clock_cycle clock = ~clock;
+		
+	initial
+	begin
+		reset = 1;
+		clock = 0;
+		win = 0;
+		#clock_cycle reset = 0;
+		#clock_cycle win=1;
+		#(5*clock_cycle) win =0;
+		#(5*clock_cycle) win = 1;
+		$finish;
+	end
+	
+endmodule 

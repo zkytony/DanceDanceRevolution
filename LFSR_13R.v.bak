@@ -1,0 +1,24 @@
+module LFSR_13b(Q, Clock, Reset);
+	input Clock, Reset;
+	output [12:0] Q;
+	
+	parameter x1 = 12, x2 = 3, x3 = 2, x4 = 0;
+	
+	wire in;
+	xnor (in, Q[x1], Q[x2], Q[x3], Q[x4]);
+	
+	//module D_FF (q, d, reset, clk;
+	D_FF dff0 (Q[0], in, Reset, Clock);
+	D_FF dff1 (Q[1], Q[0], Reset, Clock);
+	D_FF dff2 (Q[2], Q[1], Reset, Clock);
+	D_FF dff3 (Q[3], Q[2], Reset, Clock);
+	D_FF dff4 (Q[4], Q[3], Reset, Clock);
+	D_FF dff5 (Q[5], Q[4], Reset, Clock);
+	D_FF dff6 (Q[6], Q[5], Reset, Clock);
+	D_FF dff7 (Q[7], Q[6], Reset, Clock);
+	D_FF dff8 (Q[8], Q[7], Reset, Clock);
+	D_FF dff9 (Q[9], Q[8], Reset, Clock);
+	D_FF dff10 (Q[10], Q[9], Reset, Clock);
+	D_FF dff11 (Q[11], Q[10], Reset, Clock);
+	D_FF dff12 (Q[12], Q[11], Reset, Clock);
+endmodule 

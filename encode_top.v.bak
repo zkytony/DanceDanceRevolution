@@ -1,0 +1,2 @@
+module encode_top(Ls, Os);
+endmodule

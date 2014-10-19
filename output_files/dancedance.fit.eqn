@@ -1,0 +1,2967 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--EB1_count[6] is score_keep:sk|score_counter:sc|count[6] at LCFF_X13_Y22_N25
+EB1_count[6] = DFFEAS(EB1L51, GLOBAL(A1L98), !GLOBAL(A1L40),  ,  , EB1L11,  , EB1L48, EB1L49);
+
+
+--EB1_count[5] is score_keep:sk|score_counter:sc|count[5] at LCFF_X13_Y22_N23
+EB1_count[5] = DFFEAS(EB1L44, GLOBAL(A1L98), !GLOBAL(A1L40),  ,  , EB1L9,  , EB1L48, EB1L49);
+
+
+--EB1_count[4] is score_keep:sk|score_counter:sc|count[4] at LCFF_X13_Y22_N21
+EB1_count[4] = DFFEAS(EB1L41, GLOBAL(A1L98), !GLOBAL(A1L40),  ,  , EB1L7,  , EB1L48, EB1L49);
+
+
+--KB1L1 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~0 at LCCOMB_X3_Y21_N22
+KB1L1 = EB1_count[4] $ (VCC);
+
+--KB1L2 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~1 at LCCOMB_X3_Y21_N22
+KB1L2 = CARRY(EB1_count[4]);
+
+
+--KB1L3 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~2 at LCCOMB_X3_Y21_N24
+KB1L3 = (EB1_count[5] & (KB1L2 & VCC)) # (!EB1_count[5] & (!KB1L2));
+
+--KB1L4 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~3 at LCCOMB_X3_Y21_N24
+KB1L4 = CARRY((!EB1_count[5] & !KB1L2));
+
+
+--KB1L5 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~4 at LCCOMB_X3_Y21_N26
+KB1L5 = (EB1_count[6] & (KB1L4 $ (GND))) # (!EB1_count[6] & (!KB1L4 & VCC));
+
+--KB1L6 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~5 at LCCOMB_X3_Y21_N26
+KB1L6 = CARRY((EB1_count[6] & !KB1L4));
+
+
+--KB1L7 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[4]~6 at LCCOMB_X3_Y21_N28
+KB1L7 = !KB1L6;
+
+
+--EB1_count[3] is score_keep:sk|score_counter:sc|count[3] at LCFF_X13_Y22_N19
+EB1_count[3] = DFFEAS(EB1L38, GLOBAL(A1L98), !GLOBAL(A1L40),  ,  , EB1L5,  , EB1L48, EB1L49);
+
+
+--KB1L9 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~0 at LCCOMB_X3_Y21_N10
+KB1L9 = (((KB1L40) # (KB1L39)));
+
+--KB1L10 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~1 at LCCOMB_X3_Y21_N10
+KB1L10 = CARRY((KB1L40) # (KB1L39));
+
+
+--KB1L11 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~2 at LCCOMB_X3_Y21_N12
+KB1L11 = (KB1L10 & (((KB1L41) # (KB1L42)))) # (!KB1L10 & (!KB1L41 & (!KB1L42)));
+
+--KB1L12 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~3 at LCCOMB_X3_Y21_N12
+KB1L12 = CARRY((!KB1L41 & (!KB1L42 & !KB1L10)));
+
+
+--KB1L13 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~4 at LCCOMB_X3_Y21_N14
+KB1L13 = (KB1L12 & (((KB1L43) # (KB1L44)))) # (!KB1L12 & ((((KB1L43) # (KB1L44)))));
+
+--KB1L14 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~5 at LCCOMB_X3_Y21_N14
+KB1L14 = CARRY((!KB1L12 & ((KB1L43) # (KB1L44))));
+
+
+--KB1L16 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[4]~7 at LCCOMB_X3_Y21_N16
+KB1L16 = CARRY((!KB1L46 & (!KB1L45 & !KB1L14)));
+
+
+--KB1L17 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[5]~8 at LCCOMB_X3_Y21_N18
+KB1L17 = KB1L16;
+
+
+--EB1_count[2] is score_keep:sk|score_counter:sc|count[2] at LCFF_X13_Y22_N17
+EB1_count[2] = DFFEAS(EB1L35, GLOBAL(A1L98), !GLOBAL(A1L40),  ,  , EB1L3,  , EB1L48, EB1L49);
+
+
+--KB1L19 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~0 at LCCOMB_X5_Y21_N18
+KB1L19 = (((KB1L47) # (KB1L48)));
+
+--KB1L20 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~1 at LCCOMB_X5_Y21_N18
+KB1L20 = CARRY((KB1L47) # (KB1L48));
+
+
+--KB1L21 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~2 at LCCOMB_X5_Y21_N20
+KB1L21 = (KB1L20 & (((KB1L50) # (KB1L49)))) # (!KB1L20 & (!KB1L50 & (!KB1L49)));
+
+--KB1L22 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~3 at LCCOMB_X5_Y21_N20
+KB1L22 = CARRY((!KB1L50 & (!KB1L49 & !KB1L20)));
+
+
+--KB1L23 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~4 at LCCOMB_X5_Y21_N22
+KB1L23 = (KB1L22 & (((KB1L51) # (KB1L52)))) # (!KB1L22 & ((((KB1L51) # (KB1L52)))));
+
+--KB1L24 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~5 at LCCOMB_X5_Y21_N22
+KB1L24 = CARRY((!KB1L22 & ((KB1L51) # (KB1L52))));
+
+
+--KB1L26 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[4]~7 at LCCOMB_X5_Y21_N24
+KB1L26 = CARRY((!KB1L54 & (!KB1L53 & !KB1L24)));
+
+
+--KB1L27 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[5]~8 at LCCOMB_X5_Y21_N26
+KB1L27 = KB1L26;
+
+
+--EB1_count[1] is score_keep:sk|score_counter:sc|count[1] at LCFF_X13_Y22_N15
+EB1_count[1] = DFFEAS(EB1L32, GLOBAL(A1L98), !GLOBAL(A1L40),  ,  , EB1L1,  , EB1L48, EB1L49);
+
+
+--KB1L30 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[1]~1 at LCCOMB_X5_Y21_N8
+KB1L30 = CARRY((KB1L56) # (KB1L55));
+
+
+--KB1L32 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[2]~3 at LCCOMB_X5_Y21_N10
+KB1L32 = CARRY((!KB1L58 & (!KB1L57 & !KB1L30)));
+
+
+--KB1L34 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[3]~5 at LCCOMB_X5_Y21_N12
+KB1L34 = CARRY((!KB1L32 & ((KB1L60) # (KB1L59))));
+
+
+--KB1L36 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[4]~7 at LCCOMB_X5_Y21_N14
+KB1L36 = CARRY((!KB1L62 & (!KB1L61 & !KB1L34)));
+
+
+--KB1L37 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[5]~8 at LCCOMB_X5_Y21_N16
+KB1L37 = KB1L36;
+
+
+--EB1_count[0] is score_keep:sk|score_counter:sc|count[0] at LCFF_X13_Y22_N13
+EB1_count[0] = DFFEAS(EB1L29, GLOBAL(A1L98), !GLOBAL(A1L40),  ,  , EB1_count[0],  , EB1L48, EB1L49);
+
+
+--KB2L1 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~0 at LCCOMB_X10_Y21_N22
+KB2L1 = EB1_count[4] $ (VCC);
+
+--KB2L2 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~1 at LCCOMB_X10_Y21_N22
+KB2L2 = CARRY(EB1_count[4]);
+
+
+--KB2L3 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~2 at LCCOMB_X10_Y21_N24
+KB2L3 = (EB1_count[5] & (KB2L2 & VCC)) # (!EB1_count[5] & (!KB2L2));
+
+--KB2L4 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~3 at LCCOMB_X10_Y21_N24
+KB2L4 = CARRY((!EB1_count[5] & !KB2L2));
+
+
+--KB2L5 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~4 at LCCOMB_X10_Y21_N26
+KB2L5 = (EB1_count[6] & (KB2L4 $ (GND))) # (!EB1_count[6] & (!KB2L4 & VCC));
+
+--KB2L6 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~5 at LCCOMB_X10_Y21_N26
+KB2L6 = CARRY((EB1_count[6] & !KB2L4));
+
+
+--KB2L7 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[4]~6 at LCCOMB_X10_Y21_N28
+KB2L7 = !KB2L6;
+
+
+--KB2L9 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~0 at LCCOMB_X10_Y21_N8
+KB2L9 = (((KB2L39) # (KB2L40)));
+
+--KB2L10 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~1 at LCCOMB_X10_Y21_N8
+KB2L10 = CARRY((KB2L39) # (KB2L40));
+
+
+--KB2L11 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~2 at LCCOMB_X10_Y21_N10
+KB2L11 = (KB2L10 & (((KB2L42) # (KB2L41)))) # (!KB2L10 & (!KB2L42 & (!KB2L41)));
+
+--KB2L12 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~3 at LCCOMB_X10_Y21_N10
+KB2L12 = CARRY((!KB2L42 & (!KB2L41 & !KB2L10)));
+
+
+--KB2L13 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~4 at LCCOMB_X10_Y21_N12
+KB2L13 = (KB2L12 & (((KB2L44) # (KB2L43)))) # (!KB2L12 & ((((KB2L44) # (KB2L43)))));
+
+--KB2L14 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~5 at LCCOMB_X10_Y21_N12
+KB2L14 = CARRY((!KB2L12 & ((KB2L44) # (KB2L43))));
+
+
+--KB2L16 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[4]~7 at LCCOMB_X10_Y21_N14
+KB2L16 = CARRY((!KB2L45 & (!KB2L46 & !KB2L14)));
+
+
+--KB2L17 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[5]~8 at LCCOMB_X10_Y21_N16
+KB2L17 = KB2L16;
+
+
+--KB2L19 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~0 at LCCOMB_X9_Y21_N22
+KB2L19 = (((KB2L48) # (KB2L47)));
+
+--KB2L20 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~1 at LCCOMB_X9_Y21_N22
+KB2L20 = CARRY((KB2L48) # (KB2L47));
+
+
+--KB2L21 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~2 at LCCOMB_X9_Y21_N24
+KB2L21 = (KB2L20 & (((KB2L50) # (KB2L49)))) # (!KB2L20 & (!KB2L50 & (!KB2L49)));
+
+--KB2L22 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~3 at LCCOMB_X9_Y21_N24
+KB2L22 = CARRY((!KB2L50 & (!KB2L49 & !KB2L20)));
+
+
+--KB2L23 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~4 at LCCOMB_X9_Y21_N26
+KB2L23 = (KB2L22 & (((KB2L51) # (KB2L52)))) # (!KB2L22 & ((((KB2L51) # (KB2L52)))));
+
+--KB2L24 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~5 at LCCOMB_X9_Y21_N26
+KB2L24 = CARRY((!KB2L22 & ((KB2L51) # (KB2L52))));
+
+
+--KB2L26 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[4]~7 at LCCOMB_X9_Y21_N28
+KB2L26 = CARRY((!KB2L53 & (!KB2L54 & !KB2L24)));
+
+
+--KB2L27 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[5]~8 at LCCOMB_X9_Y21_N30
+KB2L27 = KB2L26;
+
+
+--KB2L29 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[1]~0 at LCCOMB_X8_Y21_N12
+KB2L29 = (((KB2L56) # (KB2L55)));
+
+--KB2L30 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[1]~1 at LCCOMB_X8_Y21_N12
+KB2L30 = CARRY((KB2L56) # (KB2L55));
+
+
+--KB2L31 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[2]~2 at LCCOMB_X8_Y21_N14
+KB2L31 = (KB2L30 & (((KB2L57) # (KB2L58)))) # (!KB2L30 & (!KB2L57 & (!KB2L58)));
+
+--KB2L32 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[2]~3 at LCCOMB_X8_Y21_N14
+KB2L32 = CARRY((!KB2L57 & (!KB2L58 & !KB2L30)));
+
+
+--KB2L33 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[3]~4 at LCCOMB_X8_Y21_N16
+KB2L33 = (KB2L32 & (((KB2L60) # (KB2L59)))) # (!KB2L32 & ((((KB2L60) # (KB2L59)))));
+
+--KB2L34 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[3]~5 at LCCOMB_X8_Y21_N16
+KB2L34 = CARRY((!KB2L32 & ((KB2L60) # (KB2L59))));
+
+
+--KB2L36 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[4]~7 at LCCOMB_X8_Y21_N18
+KB2L36 = CARRY((!KB2L61 & (!KB2L62 & !KB2L34)));
+
+
+--KB2L37 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[5]~8 at LCCOMB_X8_Y21_N20
+KB2L37 = KB2L36;
+
+
+--KB3L1 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~0 at LCCOMB_X9_Y22_N10
+KB3L1 = EB1_maxcount[4] $ (VCC);
+
+--KB3L2 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~1 at LCCOMB_X9_Y22_N10
+KB3L2 = CARRY(EB1_maxcount[4]);
+
+
+--KB3L3 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~2 at LCCOMB_X9_Y22_N12
+KB3L3 = (EB1_maxcount[5] & (KB3L2 & VCC)) # (!EB1_maxcount[5] & (!KB3L2));
+
+--KB3L4 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~3 at LCCOMB_X9_Y22_N12
+KB3L4 = CARRY((!EB1_maxcount[5] & !KB3L2));
+
+
+--KB3L5 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~4 at LCCOMB_X9_Y22_N14
+KB3L5 = (EB1_maxcount[6] & (KB3L4 $ (GND))) # (!EB1_maxcount[6] & (!KB3L4 & VCC));
+
+--KB3L6 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~5 at LCCOMB_X9_Y22_N14
+KB3L6 = CARRY((EB1_maxcount[6] & !KB3L4));
+
+
+--KB3L7 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[4]~6 at LCCOMB_X9_Y22_N16
+KB3L7 = !KB3L6;
+
+
+--KB3L9 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~0 at LCCOMB_X9_Y22_N22
+KB3L9 = (((KB3L39) # (KB3L40)));
+
+--KB3L10 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~1 at LCCOMB_X9_Y22_N22
+KB3L10 = CARRY((KB3L39) # (KB3L40));
+
+
+--KB3L11 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~2 at LCCOMB_X9_Y22_N24
+KB3L11 = (KB3L10 & (((KB3L42) # (KB3L41)))) # (!KB3L10 & (!KB3L42 & (!KB3L41)));
+
+--KB3L12 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~3 at LCCOMB_X9_Y22_N24
+KB3L12 = CARRY((!KB3L42 & (!KB3L41 & !KB3L10)));
+
+
+--KB3L13 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~4 at LCCOMB_X9_Y22_N26
+KB3L13 = (KB3L12 & (((KB3L43) # (KB3L44)))) # (!KB3L12 & ((((KB3L43) # (KB3L44)))));
+
+--KB3L14 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~5 at LCCOMB_X9_Y22_N26
+KB3L14 = CARRY((!KB3L12 & ((KB3L43) # (KB3L44))));
+
+
+--KB3L16 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[4]~7 at LCCOMB_X9_Y22_N28
+KB3L16 = CARRY((!KB3L46 & (!KB3L45 & !KB3L14)));
+
+
+--KB3L17 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[5]~8 at LCCOMB_X9_Y22_N30
+KB3L17 = KB3L16;
+
+
+--KB3L19 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~0 at LCCOMB_X8_Y22_N0
+KB3L19 = (((KB3L48) # (KB3L47)));
+
+--KB3L20 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~1 at LCCOMB_X8_Y22_N0
+KB3L20 = CARRY((KB3L48) # (KB3L47));
+
+
+--KB3L21 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~2 at LCCOMB_X8_Y22_N2
+KB3L21 = (KB3L20 & (((KB3L50) # (KB3L49)))) # (!KB3L20 & (!KB3L50 & (!KB3L49)));
+
+--KB3L22 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~3 at LCCOMB_X8_Y22_N2
+KB3L22 = CARRY((!KB3L50 & (!KB3L49 & !KB3L20)));
+
+
+--KB3L23 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~4 at LCCOMB_X8_Y22_N4
+KB3L23 = (KB3L22 & (((KB3L51) # (KB3L52)))) # (!KB3L22 & ((((KB3L51) # (KB3L52)))));
+
+--KB3L24 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~5 at LCCOMB_X8_Y22_N4
+KB3L24 = CARRY((!KB3L22 & ((KB3L51) # (KB3L52))));
+
+
+--KB3L26 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[4]~7 at LCCOMB_X8_Y22_N6
+KB3L26 = CARRY((!KB3L53 & (!KB3L54 & !KB3L24)));
+
+
+--KB3L27 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[5]~8 at LCCOMB_X8_Y22_N8
+KB3L27 = KB3L26;
+
+
+--KB3L30 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[1]~1 at LCCOMB_X7_Y22_N6
+KB3L30 = CARRY((KB3L56) # (KB3L55));
+
+
+--KB3L32 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[2]~3 at LCCOMB_X7_Y22_N8
+KB3L32 = CARRY((!KB3L57 & (!KB3L58 & !KB3L30)));
+
+
+--KB3L34 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[3]~5 at LCCOMB_X7_Y22_N10
+KB3L34 = CARRY((!KB3L32 & ((KB3L60) # (KB3L59))));
+
+
+--KB3L36 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[4]~7 at LCCOMB_X7_Y22_N12
+KB3L36 = CARRY((!KB3L61 & (!KB3L62 & !KB3L34)));
+
+
+--KB3L37 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[5]~8 at LCCOMB_X7_Y22_N14
+KB3L37 = KB3L36;
+
+
+--KB4L1 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~0 at LCCOMB_X8_Y23_N22
+KB4L1 = EB1_maxcount[4] $ (VCC);
+
+--KB4L2 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~1 at LCCOMB_X8_Y23_N22
+KB4L2 = CARRY(EB1_maxcount[4]);
+
+
+--KB4L3 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~2 at LCCOMB_X8_Y23_N24
+KB4L3 = (EB1_maxcount[5] & (KB4L2 & VCC)) # (!EB1_maxcount[5] & (!KB4L2));
+
+--KB4L4 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~3 at LCCOMB_X8_Y23_N24
+KB4L4 = CARRY((!EB1_maxcount[5] & !KB4L2));
+
+
+--KB4L5 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~4 at LCCOMB_X8_Y23_N26
+KB4L5 = (EB1_maxcount[6] & (KB4L4 $ (GND))) # (!EB1_maxcount[6] & (!KB4L4 & VCC));
+
+--KB4L6 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~5 at LCCOMB_X8_Y23_N26
+KB4L6 = CARRY((EB1_maxcount[6] & !KB4L4));
+
+
+--KB4L7 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[4]~6 at LCCOMB_X8_Y23_N28
+KB4L7 = !KB4L6;
+
+
+--KB4L9 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~0 at LCCOMB_X8_Y23_N6
+KB4L9 = (((KB4L40) # (KB4L39)));
+
+--KB4L10 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~1 at LCCOMB_X8_Y23_N6
+KB4L10 = CARRY((KB4L40) # (KB4L39));
+
+
+--KB4L11 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~2 at LCCOMB_X8_Y23_N8
+KB4L11 = (KB4L10 & (((KB4L41) # (KB4L42)))) # (!KB4L10 & (!KB4L41 & (!KB4L42)));
+
+--KB4L12 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~3 at LCCOMB_X8_Y23_N8
+KB4L12 = CARRY((!KB4L41 & (!KB4L42 & !KB4L10)));
+
+
+--KB4L13 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~4 at LCCOMB_X8_Y23_N10
+KB4L13 = (KB4L12 & (((KB4L44) # (KB4L43)))) # (!KB4L12 & ((((KB4L44) # (KB4L43)))));
+
+--KB4L14 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~5 at LCCOMB_X8_Y23_N10
+KB4L14 = CARRY((!KB4L12 & ((KB4L44) # (KB4L43))));
+
+
+--KB4L16 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[4]~7 at LCCOMB_X8_Y23_N12
+KB4L16 = CARRY((!KB4L46 & (!KB4L45 & !KB4L14)));
+
+
+--KB4L17 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[5]~8 at LCCOMB_X8_Y23_N14
+KB4L17 = KB4L16;
+
+
+--KB4L19 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~0 at LCCOMB_X6_Y23_N18
+KB4L19 = (((KB4L48) # (KB4L47)));
+
+--KB4L20 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~1 at LCCOMB_X6_Y23_N18
+KB4L20 = CARRY((KB4L48) # (KB4L47));
+
+
+--KB4L21 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~2 at LCCOMB_X6_Y23_N20
+KB4L21 = (KB4L20 & (((KB4L49) # (KB4L50)))) # (!KB4L20 & (!KB4L49 & (!KB4L50)));
+
+--KB4L22 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~3 at LCCOMB_X6_Y23_N20
+KB4L22 = CARRY((!KB4L49 & (!KB4L50 & !KB4L20)));
+
+
+--KB4L23 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~4 at LCCOMB_X6_Y23_N22
+KB4L23 = (KB4L22 & (((KB4L52) # (KB4L51)))) # (!KB4L22 & ((((KB4L52) # (KB4L51)))));
+
+--KB4L24 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~5 at LCCOMB_X6_Y23_N22
+KB4L24 = CARRY((!KB4L22 & ((KB4L52) # (KB4L51))));
+
+
+--KB4L26 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[4]~7 at LCCOMB_X6_Y23_N24
+KB4L26 = CARRY((!KB4L54 & (!KB4L53 & !KB4L24)));
+
+
+--KB4L27 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[5]~8 at LCCOMB_X6_Y23_N26
+KB4L27 = KB4L26;
+
+
+--KB4L29 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[1]~0 at LCCOMB_X5_Y23_N2
+KB4L29 = (((KB4L56) # (KB4L55)));
+
+--KB4L30 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[1]~1 at LCCOMB_X5_Y23_N2
+KB4L30 = CARRY((KB4L56) # (KB4L55));
+
+
+--KB4L31 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[2]~2 at LCCOMB_X5_Y23_N4
+KB4L31 = (KB4L30 & (((KB4L58) # (KB4L57)))) # (!KB4L30 & (!KB4L58 & (!KB4L57)));
+
+--KB4L32 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[2]~3 at LCCOMB_X5_Y23_N4
+KB4L32 = CARRY((!KB4L58 & (!KB4L57 & !KB4L30)));
+
+
+--KB4L33 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[3]~4 at LCCOMB_X5_Y23_N6
+KB4L33 = (KB4L32 & (((KB4L59) # (KB4L60)))) # (!KB4L32 & ((((KB4L59) # (KB4L60)))));
+
+--KB4L34 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[3]~5 at LCCOMB_X5_Y23_N6
+KB4L34 = CARRY((!KB4L32 & ((KB4L59) # (KB4L60))));
+
+
+--KB4L36 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[4]~7 at LCCOMB_X5_Y23_N8
+KB4L36 = CARRY((!KB4L62 & (!KB4L61 & !KB4L34)));
+
+
+--KB4L37 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[5]~8 at LCCOMB_X5_Y23_N10
+KB4L37 = KB4L36;
+
+
+--G1_divided_clocks[10] is clock_divider:divider|divided_clocks[10] at LCFF_X24_Y20_N21
+G1_divided_clocks[10] = DFFEAS(G1L32, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--EB1L29 is score_keep:sk|score_counter:sc|count[0]~15 at LCCOMB_X13_Y22_N12
+EB1L29 = (EB1_count[0] & (U4_WideOr0 $ (VCC))) # (!EB1_count[0] & (U4_WideOr0 & VCC));
+
+--EB1L30 is score_keep:sk|score_counter:sc|count[0]~16 at LCCOMB_X13_Y22_N12
+EB1L30 = CARRY((EB1_count[0] & U4_WideOr0));
+
+
+--EB1L32 is score_keep:sk|score_counter:sc|count[1]~17 at LCCOMB_X13_Y22_N14
+EB1L32 = (EB1_count[1] & ((U4_WideOr1 & (EB1L30 & VCC)) # (!U4_WideOr1 & (!EB1L30)))) # (!EB1_count[1] & ((U4_WideOr1 & (!EB1L30)) # (!U4_WideOr1 & ((EB1L30) # (GND)))));
+
+--EB1L33 is score_keep:sk|score_counter:sc|count[1]~18 at LCCOMB_X13_Y22_N14
+EB1L33 = CARRY((EB1_count[1] & (!U4_WideOr1 & !EB1L30)) # (!EB1_count[1] & ((!EB1L30) # (!U4_WideOr1))));
+
+
+--EB1L35 is score_keep:sk|score_counter:sc|count[2]~19 at LCCOMB_X13_Y22_N16
+EB1L35 = ((EB1_count[2] $ (U4L3 $ (EB1L33)))) # (GND);
+
+--EB1L36 is score_keep:sk|score_counter:sc|count[2]~20 at LCCOMB_X13_Y22_N16
+EB1L36 = CARRY((EB1_count[2] & ((!EB1L33) # (!U4L3))) # (!EB1_count[2] & (!U4L3 & !EB1L33)));
+
+
+--EB1L38 is score_keep:sk|score_counter:sc|count[3]~21 at LCCOMB_X13_Y22_N18
+EB1L38 = (EB1_count[3] & ((U4L3 & (!EB1L36)) # (!U4L3 & (EB1L36 & VCC)))) # (!EB1_count[3] & ((U4L3 & ((EB1L36) # (GND))) # (!U4L3 & (!EB1L36))));
+
+--EB1L39 is score_keep:sk|score_counter:sc|count[3]~22 at LCCOMB_X13_Y22_N18
+EB1L39 = CARRY((EB1_count[3] & (U4L3 & !EB1L36)) # (!EB1_count[3] & ((U4L3) # (!EB1L36))));
+
+
+--EB1L41 is score_keep:sk|score_counter:sc|count[4]~23 at LCCOMB_X13_Y22_N20
+EB1L41 = (EB1_count[4] & (EB1L39 $ (GND))) # (!EB1_count[4] & (!EB1L39 & VCC));
+
+--EB1L42 is score_keep:sk|score_counter:sc|count[4]~24 at LCCOMB_X13_Y22_N20
+EB1L42 = CARRY((EB1_count[4] & !EB1L39));
+
+
+--EB1L44 is score_keep:sk|score_counter:sc|count[5]~25 at LCCOMB_X13_Y22_N22
+EB1L44 = (EB1_count[5] & (!EB1L42)) # (!EB1_count[5] & ((EB1L42) # (GND)));
+
+--EB1L45 is score_keep:sk|score_counter:sc|count[5]~26 at LCCOMB_X13_Y22_N22
+EB1L45 = CARRY((!EB1L42) # (!EB1_count[5]));
+
+
+--EB1L51 is score_keep:sk|score_counter:sc|count[6]~27 at LCCOMB_X13_Y22_N24
+EB1L51 = EB1L45 $ (!EB1_count[6]);
+
+
+--EB1L1 is score_keep:sk|score_counter:sc|Add0~0 at LCCOMB_X13_Y22_N0
+EB1L1 = EB1_count[1] $ (VCC);
+
+--EB1L2 is score_keep:sk|score_counter:sc|Add0~1 at LCCOMB_X13_Y22_N0
+EB1L2 = CARRY(EB1_count[1]);
+
+
+--EB1L3 is score_keep:sk|score_counter:sc|Add0~2 at LCCOMB_X13_Y22_N2
+EB1L3 = (EB1_count[2] & (EB1L2 & VCC)) # (!EB1_count[2] & (!EB1L2));
+
+--EB1L4 is score_keep:sk|score_counter:sc|Add0~3 at LCCOMB_X13_Y22_N2
+EB1L4 = CARRY((!EB1_count[2] & !EB1L2));
+
+
+--EB1L5 is score_keep:sk|score_counter:sc|Add0~4 at LCCOMB_X13_Y22_N4
+EB1L5 = (EB1_count[3] & ((GND) # (!EB1L4))) # (!EB1_count[3] & (EB1L4 $ (GND)));
+
+--EB1L6 is score_keep:sk|score_counter:sc|Add0~5 at LCCOMB_X13_Y22_N4
+EB1L6 = CARRY((EB1_count[3]) # (!EB1L4));
+
+
+--EB1L7 is score_keep:sk|score_counter:sc|Add0~6 at LCCOMB_X13_Y22_N6
+EB1L7 = (EB1_count[4] & (EB1L6 & VCC)) # (!EB1_count[4] & (!EB1L6));
+
+--EB1L8 is score_keep:sk|score_counter:sc|Add0~7 at LCCOMB_X13_Y22_N6
+EB1L8 = CARRY((!EB1_count[4] & !EB1L6));
+
+
+--EB1L9 is score_keep:sk|score_counter:sc|Add0~8 at LCCOMB_X13_Y22_N8
+EB1L9 = (EB1_count[5] & ((GND) # (!EB1L8))) # (!EB1_count[5] & (EB1L8 $ (GND)));
+
+--EB1L10 is score_keep:sk|score_counter:sc|Add0~9 at LCCOMB_X13_Y22_N8
+EB1L10 = CARRY((EB1_count[5]) # (!EB1L8));
+
+
+--EB1L11 is score_keep:sk|score_counter:sc|Add0~10 at LCCOMB_X13_Y22_N10
+EB1L11 = EB1L10 $ (!EB1_count[6]);
+
+
+--EB1L14 is score_keep:sk|score_counter:sc|LessThan0~1 at LCCOMB_X12_Y22_N6
+EB1L14 = CARRY((!EB1_maxcount[0] & EB1_count[0]));
+
+
+--EB1L16 is score_keep:sk|score_counter:sc|LessThan0~3 at LCCOMB_X12_Y22_N8
+EB1L16 = CARRY((EB1_maxcount[1] & ((!EB1L14) # (!EB1_count[1]))) # (!EB1_maxcount[1] & (!EB1_count[1] & !EB1L14)));
+
+
+--EB1L18 is score_keep:sk|score_counter:sc|LessThan0~5 at LCCOMB_X12_Y22_N10
+EB1L18 = CARRY((EB1_count[2] & ((!EB1L16) # (!EB1_maxcount[2]))) # (!EB1_count[2] & (!EB1_maxcount[2] & !EB1L16)));
+
+
+--EB1L20 is score_keep:sk|score_counter:sc|LessThan0~7 at LCCOMB_X12_Y22_N12
+EB1L20 = CARRY((EB1_maxcount[3] & ((!EB1L18) # (!EB1_count[3]))) # (!EB1_maxcount[3] & (!EB1_count[3] & !EB1L18)));
+
+
+--EB1L22 is score_keep:sk|score_counter:sc|LessThan0~9 at LCCOMB_X12_Y22_N14
+EB1L22 = CARRY((EB1_maxcount[4] & (EB1_count[4] & !EB1L20)) # (!EB1_maxcount[4] & ((EB1_count[4]) # (!EB1L20))));
+
+
+--EB1L24 is score_keep:sk|score_counter:sc|LessThan0~11 at LCCOMB_X12_Y22_N16
+EB1L24 = CARRY((EB1_count[5] & (EB1_maxcount[5] & !EB1L22)) # (!EB1_count[5] & ((EB1_maxcount[5]) # (!EB1L22))));
+
+
+--EB1L25 is score_keep:sk|score_counter:sc|LessThan0~12 at LCCOMB_X12_Y22_N18
+EB1L25 = (EB1_maxcount[6] & ((!EB1_count[6]) # (!EB1L24))) # (!EB1_maxcount[6] & (!EB1L24 & !EB1_count[6]));
+
+
+--G1_divided_clocks[9] is clock_divider:divider|divided_clocks[9] at LCFF_X24_Y20_N19
+G1_divided_clocks[9] = DFFEAS(G1L29, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[8] is clock_divider:divider|divided_clocks[8] at LCFF_X24_Y20_N17
+G1_divided_clocks[8] = DFFEAS(G1L26, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[7] is clock_divider:divider|divided_clocks[7] at LCFF_X24_Y20_N15
+G1_divided_clocks[7] = DFFEAS(G1L23, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[6] is clock_divider:divider|divided_clocks[6] at LCFF_X24_Y20_N13
+G1_divided_clocks[6] = DFFEAS(G1L20, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[5] is clock_divider:divider|divided_clocks[5] at LCFF_X24_Y20_N11
+G1_divided_clocks[5] = DFFEAS(G1L17, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[4] is clock_divider:divider|divided_clocks[4] at LCFF_X24_Y20_N9
+G1_divided_clocks[4] = DFFEAS(G1L14, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[3] is clock_divider:divider|divided_clocks[3] at LCFF_X24_Y20_N7
+G1_divided_clocks[3] = DFFEAS(G1L11, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[2] is clock_divider:divider|divided_clocks[2] at LCFF_X24_Y20_N5
+G1_divided_clocks[2] = DFFEAS(G1L8, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[1] is clock_divider:divider|divided_clocks[1] at LCFF_X24_Y20_N3
+G1_divided_clocks[1] = DFFEAS(G1L5, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1L5 is clock_divider:divider|divided_clocks[1]~31 at LCCOMB_X24_Y20_N2
+G1L5 = (G1_divided_clocks[1] & (G1_divided_clocks[0] $ (VCC))) # (!G1_divided_clocks[1] & (G1_divided_clocks[0] & VCC));
+
+--G1L6 is clock_divider:divider|divided_clocks[1]~32 at LCCOMB_X24_Y20_N2
+G1L6 = CARRY((G1_divided_clocks[1] & G1_divided_clocks[0]));
+
+
+--G1L8 is clock_divider:divider|divided_clocks[2]~33 at LCCOMB_X24_Y20_N4
+G1L8 = (G1_divided_clocks[2] & (!G1L6)) # (!G1_divided_clocks[2] & ((G1L6) # (GND)));
+
+--G1L9 is clock_divider:divider|divided_clocks[2]~34 at LCCOMB_X24_Y20_N4
+G1L9 = CARRY((!G1L6) # (!G1_divided_clocks[2]));
+
+
+--G1L11 is clock_divider:divider|divided_clocks[3]~35 at LCCOMB_X24_Y20_N6
+G1L11 = (G1_divided_clocks[3] & (G1L9 $ (GND))) # (!G1_divided_clocks[3] & (!G1L9 & VCC));
+
+--G1L12 is clock_divider:divider|divided_clocks[3]~36 at LCCOMB_X24_Y20_N6
+G1L12 = CARRY((G1_divided_clocks[3] & !G1L9));
+
+
+--G1L14 is clock_divider:divider|divided_clocks[4]~37 at LCCOMB_X24_Y20_N8
+G1L14 = (G1_divided_clocks[4] & (!G1L12)) # (!G1_divided_clocks[4] & ((G1L12) # (GND)));
+
+--G1L15 is clock_divider:divider|divided_clocks[4]~38 at LCCOMB_X24_Y20_N8
+G1L15 = CARRY((!G1L12) # (!G1_divided_clocks[4]));
+
+
+--G1L17 is clock_divider:divider|divided_clocks[5]~39 at LCCOMB_X24_Y20_N10
+G1L17 = (G1_divided_clocks[5] & (G1L15 $ (GND))) # (!G1_divided_clocks[5] & (!G1L15 & VCC));
+
+--G1L18 is clock_divider:divider|divided_clocks[5]~40 at LCCOMB_X24_Y20_N10
+G1L18 = CARRY((G1_divided_clocks[5] & !G1L15));
+
+
+--G1L20 is clock_divider:divider|divided_clocks[6]~41 at LCCOMB_X24_Y20_N12
+G1L20 = (G1_divided_clocks[6] & (!G1L18)) # (!G1_divided_clocks[6] & ((G1L18) # (GND)));
+
+--G1L21 is clock_divider:divider|divided_clocks[6]~42 at LCCOMB_X24_Y20_N12
+G1L21 = CARRY((!G1L18) # (!G1_divided_clocks[6]));
+
+
+--G1L23 is clock_divider:divider|divided_clocks[7]~43 at LCCOMB_X24_Y20_N14
+G1L23 = (G1_divided_clocks[7] & (G1L21 $ (GND))) # (!G1_divided_clocks[7] & (!G1L21 & VCC));
+
+--G1L24 is clock_divider:divider|divided_clocks[7]~44 at LCCOMB_X24_Y20_N14
+G1L24 = CARRY((G1_divided_clocks[7] & !G1L21));
+
+
+--G1L26 is clock_divider:divider|divided_clocks[8]~45 at LCCOMB_X24_Y20_N16
+G1L26 = (G1_divided_clocks[8] & (!G1L24)) # (!G1_divided_clocks[8] & ((G1L24) # (GND)));
+
+--G1L27 is clock_divider:divider|divided_clocks[8]~46 at LCCOMB_X24_Y20_N16
+G1L27 = CARRY((!G1L24) # (!G1_divided_clocks[8]));
+
+
+--G1L29 is clock_divider:divider|divided_clocks[9]~47 at LCCOMB_X24_Y20_N18
+G1L29 = (G1_divided_clocks[9] & (G1L27 $ (GND))) # (!G1_divided_clocks[9] & (!G1L27 & VCC));
+
+--G1L30 is clock_divider:divider|divided_clocks[9]~48 at LCCOMB_X24_Y20_N18
+G1L30 = CARRY((G1_divided_clocks[9] & !G1L27));
+
+
+--G1L32 is clock_divider:divider|divided_clocks[10]~49 at LCCOMB_X24_Y20_N20
+G1L32 = (G1_divided_clocks[10] & (!G1L30)) # (!G1_divided_clocks[10] & ((G1L30) # (GND)));
+
+--G1L33 is clock_divider:divider|divided_clocks[10]~50 at LCCOMB_X24_Y20_N20
+G1L33 = CARRY((!G1L30) # (!G1_divided_clocks[10]));
+
+
+--G1_divided_clocks[31] is clock_divider:divider|divided_clocks[31] at LCFF_X24_Y19_N31
+G1_divided_clocks[31] = DFFEAS(G1L96, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[30] is clock_divider:divider|divided_clocks[30] at LCFF_X24_Y19_N29
+G1_divided_clocks[30] = DFFEAS(G1L93, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[29] is clock_divider:divider|divided_clocks[29] at LCFF_X24_Y19_N27
+G1_divided_clocks[29] = DFFEAS(G1L90, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[28] is clock_divider:divider|divided_clocks[28] at LCFF_X24_Y19_N25
+G1_divided_clocks[28] = DFFEAS(G1L87, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[27] is clock_divider:divider|divided_clocks[27] at LCFF_X24_Y19_N23
+G1_divided_clocks[27] = DFFEAS(G1L84, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[26] is clock_divider:divider|divided_clocks[26] at LCFF_X24_Y19_N21
+G1_divided_clocks[26] = DFFEAS(G1L81, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[25] is clock_divider:divider|divided_clocks[25] at LCFF_X24_Y19_N19
+G1_divided_clocks[25] = DFFEAS(G1L78, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[24] is clock_divider:divider|divided_clocks[24] at LCFF_X24_Y19_N17
+G1_divided_clocks[24] = DFFEAS(G1L75, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[23] is clock_divider:divider|divided_clocks[23] at LCFF_X24_Y19_N15
+G1_divided_clocks[23] = DFFEAS(G1L72, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[22] is clock_divider:divider|divided_clocks[22] at LCFF_X24_Y19_N13
+G1_divided_clocks[22] = DFFEAS(G1L69, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[21] is clock_divider:divider|divided_clocks[21] at LCFF_X24_Y19_N11
+G1_divided_clocks[21] = DFFEAS(G1L66, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[20] is clock_divider:divider|divided_clocks[20] at LCFF_X24_Y19_N9
+G1_divided_clocks[20] = DFFEAS(G1L63, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[19] is clock_divider:divider|divided_clocks[19] at LCFF_X24_Y19_N7
+G1_divided_clocks[19] = DFFEAS(G1L60, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[18] is clock_divider:divider|divided_clocks[18] at LCFF_X24_Y19_N5
+G1_divided_clocks[18] = DFFEAS(G1L57, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[17] is clock_divider:divider|divided_clocks[17] at LCFF_X24_Y19_N3
+G1_divided_clocks[17] = DFFEAS(G1L54, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[16] is clock_divider:divider|divided_clocks[16] at LCFF_X24_Y19_N1
+G1_divided_clocks[16] = DFFEAS(G1L51, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[15] is clock_divider:divider|divided_clocks[15] at LCFF_X24_Y20_N31
+G1_divided_clocks[15] = DFFEAS(G1L48, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[14] is clock_divider:divider|divided_clocks[14] at LCFF_X24_Y20_N29
+G1_divided_clocks[14] = DFFEAS(G1L45, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[13] is clock_divider:divider|divided_clocks[13] at LCFF_X24_Y20_N27
+G1_divided_clocks[13] = DFFEAS(G1L42, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[12] is clock_divider:divider|divided_clocks[12] at LCFF_X24_Y20_N25
+G1_divided_clocks[12] = DFFEAS(G1L39, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1_divided_clocks[11] is clock_divider:divider|divided_clocks[11] at LCFF_X24_Y20_N23
+G1_divided_clocks[11] = DFFEAS(G1L36, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1L36 is clock_divider:divider|divided_clocks[11]~51 at LCCOMB_X24_Y20_N22
+G1L36 = (G1_divided_clocks[11] & (G1L33 $ (GND))) # (!G1_divided_clocks[11] & (!G1L33 & VCC));
+
+--G1L37 is clock_divider:divider|divided_clocks[11]~52 at LCCOMB_X24_Y20_N22
+G1L37 = CARRY((G1_divided_clocks[11] & !G1L33));
+
+
+--G1L39 is clock_divider:divider|divided_clocks[12]~53 at LCCOMB_X24_Y20_N24
+G1L39 = (G1_divided_clocks[12] & (!G1L37)) # (!G1_divided_clocks[12] & ((G1L37) # (GND)));
+
+--G1L40 is clock_divider:divider|divided_clocks[12]~54 at LCCOMB_X24_Y20_N24
+G1L40 = CARRY((!G1L37) # (!G1_divided_clocks[12]));
+
+
+--G1L42 is clock_divider:divider|divided_clocks[13]~55 at LCCOMB_X24_Y20_N26
+G1L42 = (G1_divided_clocks[13] & (G1L40 $ (GND))) # (!G1_divided_clocks[13] & (!G1L40 & VCC));
+
+--G1L43 is clock_divider:divider|divided_clocks[13]~56 at LCCOMB_X24_Y20_N26
+G1L43 = CARRY((G1_divided_clocks[13] & !G1L40));
+
+
+--G1L45 is clock_divider:divider|divided_clocks[14]~57 at LCCOMB_X24_Y20_N28
+G1L45 = (G1_divided_clocks[14] & (!G1L43)) # (!G1_divided_clocks[14] & ((G1L43) # (GND)));
+
+--G1L46 is clock_divider:divider|divided_clocks[14]~58 at LCCOMB_X24_Y20_N28
+G1L46 = CARRY((!G1L43) # (!G1_divided_clocks[14]));
+
+
+--G1L48 is clock_divider:divider|divided_clocks[15]~59 at LCCOMB_X24_Y20_N30
+G1L48 = (G1_divided_clocks[15] & (G1L46 $ (GND))) # (!G1_divided_clocks[15] & (!G1L46 & VCC));
+
+--G1L49 is clock_divider:divider|divided_clocks[15]~60 at LCCOMB_X24_Y20_N30
+G1L49 = CARRY((G1_divided_clocks[15] & !G1L46));
+
+
+--G1L51 is clock_divider:divider|divided_clocks[16]~61 at LCCOMB_X24_Y19_N0
+G1L51 = (G1_divided_clocks[16] & (!G1L49)) # (!G1_divided_clocks[16] & ((G1L49) # (GND)));
+
+--G1L52 is clock_divider:divider|divided_clocks[16]~62 at LCCOMB_X24_Y19_N0
+G1L52 = CARRY((!G1L49) # (!G1_divided_clocks[16]));
+
+
+--G1L54 is clock_divider:divider|divided_clocks[17]~63 at LCCOMB_X24_Y19_N2
+G1L54 = (G1_divided_clocks[17] & (G1L52 $ (GND))) # (!G1_divided_clocks[17] & (!G1L52 & VCC));
+
+--G1L55 is clock_divider:divider|divided_clocks[17]~64 at LCCOMB_X24_Y19_N2
+G1L55 = CARRY((G1_divided_clocks[17] & !G1L52));
+
+
+--G1L57 is clock_divider:divider|divided_clocks[18]~65 at LCCOMB_X24_Y19_N4
+G1L57 = (G1_divided_clocks[18] & (!G1L55)) # (!G1_divided_clocks[18] & ((G1L55) # (GND)));
+
+--G1L58 is clock_divider:divider|divided_clocks[18]~66 at LCCOMB_X24_Y19_N4
+G1L58 = CARRY((!G1L55) # (!G1_divided_clocks[18]));
+
+
+--G1L60 is clock_divider:divider|divided_clocks[19]~67 at LCCOMB_X24_Y19_N6
+G1L60 = (G1_divided_clocks[19] & (G1L58 $ (GND))) # (!G1_divided_clocks[19] & (!G1L58 & VCC));
+
+--G1L61 is clock_divider:divider|divided_clocks[19]~68 at LCCOMB_X24_Y19_N6
+G1L61 = CARRY((G1_divided_clocks[19] & !G1L58));
+
+
+--G1L63 is clock_divider:divider|divided_clocks[20]~69 at LCCOMB_X24_Y19_N8
+G1L63 = (G1_divided_clocks[20] & (!G1L61)) # (!G1_divided_clocks[20] & ((G1L61) # (GND)));
+
+--G1L64 is clock_divider:divider|divided_clocks[20]~70 at LCCOMB_X24_Y19_N8
+G1L64 = CARRY((!G1L61) # (!G1_divided_clocks[20]));
+
+
+--G1L66 is clock_divider:divider|divided_clocks[21]~71 at LCCOMB_X24_Y19_N10
+G1L66 = (G1_divided_clocks[21] & (G1L64 $ (GND))) # (!G1_divided_clocks[21] & (!G1L64 & VCC));
+
+--G1L67 is clock_divider:divider|divided_clocks[21]~72 at LCCOMB_X24_Y19_N10
+G1L67 = CARRY((G1_divided_clocks[21] & !G1L64));
+
+
+--G1L69 is clock_divider:divider|divided_clocks[22]~73 at LCCOMB_X24_Y19_N12
+G1L69 = (G1_divided_clocks[22] & (!G1L67)) # (!G1_divided_clocks[22] & ((G1L67) # (GND)));
+
+--G1L70 is clock_divider:divider|divided_clocks[22]~74 at LCCOMB_X24_Y19_N12
+G1L70 = CARRY((!G1L67) # (!G1_divided_clocks[22]));
+
+
+--G1L72 is clock_divider:divider|divided_clocks[23]~75 at LCCOMB_X24_Y19_N14
+G1L72 = (G1_divided_clocks[23] & (G1L70 $ (GND))) # (!G1_divided_clocks[23] & (!G1L70 & VCC));
+
+--G1L73 is clock_divider:divider|divided_clocks[23]~76 at LCCOMB_X24_Y19_N14
+G1L73 = CARRY((G1_divided_clocks[23] & !G1L70));
+
+
+--G1L75 is clock_divider:divider|divided_clocks[24]~77 at LCCOMB_X24_Y19_N16
+G1L75 = (G1_divided_clocks[24] & (!G1L73)) # (!G1_divided_clocks[24] & ((G1L73) # (GND)));
+
+--G1L76 is clock_divider:divider|divided_clocks[24]~78 at LCCOMB_X24_Y19_N16
+G1L76 = CARRY((!G1L73) # (!G1_divided_clocks[24]));
+
+
+--G1L78 is clock_divider:divider|divided_clocks[25]~79 at LCCOMB_X24_Y19_N18
+G1L78 = (G1_divided_clocks[25] & (G1L76 $ (GND))) # (!G1_divided_clocks[25] & (!G1L76 & VCC));
+
+--G1L79 is clock_divider:divider|divided_clocks[25]~80 at LCCOMB_X24_Y19_N18
+G1L79 = CARRY((G1_divided_clocks[25] & !G1L76));
+
+
+--G1L81 is clock_divider:divider|divided_clocks[26]~81 at LCCOMB_X24_Y19_N20
+G1L81 = (G1_divided_clocks[26] & (!G1L79)) # (!G1_divided_clocks[26] & ((G1L79) # (GND)));
+
+--G1L82 is clock_divider:divider|divided_clocks[26]~82 at LCCOMB_X24_Y19_N20
+G1L82 = CARRY((!G1L79) # (!G1_divided_clocks[26]));
+
+
+--G1L84 is clock_divider:divider|divided_clocks[27]~83 at LCCOMB_X24_Y19_N22
+G1L84 = (G1_divided_clocks[27] & (G1L82 $ (GND))) # (!G1_divided_clocks[27] & (!G1L82 & VCC));
+
+--G1L85 is clock_divider:divider|divided_clocks[27]~84 at LCCOMB_X24_Y19_N22
+G1L85 = CARRY((G1_divided_clocks[27] & !G1L82));
+
+
+--G1L87 is clock_divider:divider|divided_clocks[28]~85 at LCCOMB_X24_Y19_N24
+G1L87 = (G1_divided_clocks[28] & (!G1L85)) # (!G1_divided_clocks[28] & ((G1L85) # (GND)));
+
+--G1L88 is clock_divider:divider|divided_clocks[28]~86 at LCCOMB_X24_Y19_N24
+G1L88 = CARRY((!G1L85) # (!G1_divided_clocks[28]));
+
+
+--G1L90 is clock_divider:divider|divided_clocks[29]~87 at LCCOMB_X24_Y19_N26
+G1L90 = (G1_divided_clocks[29] & (G1L88 $ (GND))) # (!G1_divided_clocks[29] & (!G1L88 & VCC));
+
+--G1L91 is clock_divider:divider|divided_clocks[29]~88 at LCCOMB_X24_Y19_N26
+G1L91 = CARRY((G1_divided_clocks[29] & !G1L88));
+
+
+--G1L93 is clock_divider:divider|divided_clocks[30]~89 at LCCOMB_X24_Y19_N28
+G1L93 = (G1_divided_clocks[30] & (!G1L91)) # (!G1_divided_clocks[30] & ((G1L91) # (GND)));
+
+--G1L94 is clock_divider:divider|divided_clocks[30]~90 at LCCOMB_X24_Y19_N28
+G1L94 = CARRY((!G1L91) # (!G1_divided_clocks[30]));
+
+
+--G1L96 is clock_divider:divider|divided_clocks[31]~91 at LCCOMB_X24_Y19_N30
+G1L96 = G1L94 $ (!G1_divided_clocks[31]);
+
+
+--V111_q is counter_3b:ct|D_FF:dff3|q at LCFF_X43_Y22_N9
+V111_q = DFFEAS(V111L2, GLOBAL(G1L34), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V109_q is counter_3b:ct|D_FF:dff1|q at LCFF_X43_Y22_N23
+V109_q = DFFEAS(V109L2, GLOBAL(G1L34), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V110_q is counter_3b:ct|D_FF:dff2|q at LCFF_X43_Y22_N29
+V110_q = DFFEAS(V110L2, GLOBAL(G1L34), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--F1L1 is decoder3to8:decoder|Decoder0~0 at LCCOMB_X43_Y22_N30
+F1L1 = (!V110_q & (!V109_q & !V111_q));
+
+
+--F1L2 is decoder3to8:decoder|Decoder0~1 at LCCOMB_X43_Y22_N0
+F1L2 = (!V110_q & (V109_q & !V111_q));
+
+
+--F1L3 is decoder3to8:decoder|Decoder0~2 at LCCOMB_X43_Y22_N6
+F1L3 = (V110_q & (!V109_q & !V111_q));
+
+
+--F1L4 is decoder3to8:decoder|Decoder0~3 at LCCOMB_X43_Y22_N16
+F1L4 = (V110_q & (V109_q & !V111_q));
+
+
+--F1L5 is decoder3to8:decoder|Decoder0~4 at LCCOMB_X43_Y22_N10
+F1L5 = (!V110_q & (!V109_q & V111_q));
+
+
+--F1L6 is decoder3to8:decoder|Decoder0~5 at LCCOMB_X40_Y22_N8
+F1L6 = (V109_q & (!V110_q & V111_q));
+
+
+--F1L7 is decoder3to8:decoder|Decoder0~6 at LCCOMB_X43_Y22_N20
+F1L7 = (V110_q & (!V109_q & V111_q));
+
+
+--F1L8 is decoder3to8:decoder|Decoder0~7 at LCCOMB_X43_Y22_N18
+F1L8 = (V110_q & (V109_q & V111_q));
+
+
+--V71_q is bank:b0|L1:light_1|D_FF:dff0|q at LCFF_X39_Y22_N9
+V71_q = DFFEAS(Q1L3, GLOBAL(A1L90), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V73_q is bank:b0|L2:light_2|D_FF:dff0|q at LCFF_X39_Y22_N23
+V73_q = DFFEAS(R1L4, GLOBAL(A1L90), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--F1L9 is decoder3to8:decoder|Decoder0~8 at LCCOMB_X40_Y22_N10
+F1L9 = (V110_q & !V111_q);
+
+
+--V69_q is bank:b0|L0:light_0|D_FF:dff0|q at LCFF_X39_Y22_N13
+V69_q = DFFEAS(P1L3, GLOBAL(A1L90), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V77_q is bank:b0|L4:light_4|D_FF:dff0|q at LCFF_X40_Y22_N5
+V77_q = DFFEAS(T1L3, GLOBAL(A1L90), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V78_q is bank:b0|L4:light_4|D_FF:dff1|q at LCFF_X40_Y22_N31
+V78_q = DFFEAS(T1L2, GLOBAL(A1L90), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--D1L2 is mux8to1:col_0_red|Mux0~0 at LCCOMB_X40_Y22_N24
+D1L2 = (!V78_q & (!V109_q & V77_q));
+
+
+--D1L3 is mux8to1:col_0_red|Mux0~1 at LCCOMB_X40_Y22_N26
+D1L3 = (!V110_q & ((!V111_q) # (!V109_q)));
+
+
+--D1L4 is mux8to1:col_0_red|Mux0~2 at LCCOMB_X40_Y22_N12
+D1L4 = (V111_q) # ((V109_q & V110_q));
+
+
+--D1L5 is mux8to1:col_0_red|Mux0~3 at LCCOMB_X40_Y22_N22
+D1L5 = (D1L4 & (V69_q & ((D1L3)))) # (!D1L4 & (((D1L2) # (!D1L3))));
+
+
+--D1_Mux0 is mux8to1:col_0_red|Mux0 at LCCOMB_X40_Y22_N0
+D1_Mux0 = (D1L5 & (((V73_q) # (!F1L9)))) # (!D1L5 & (V71_q & ((F1L9))));
+
+
+--V81_q is bank:b1|L1:light_1|D_FF:dff0|q at LCFF_X44_Y22_N25
+V81_q = DFFEAS(Q2L3, GLOBAL(A1L92), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V83_q is bank:b1|L2:light_2|D_FF:dff0|q at LCFF_X44_Y22_N7
+V83_q = DFFEAS(R2L4, GLOBAL(A1L92), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V79_q is bank:b1|L0:light_0|D_FF:dff0|q at LCFF_X44_Y22_N9
+V79_q = DFFEAS(P2L3, GLOBAL(A1L92), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V87_q is bank:b1|L4:light_4|D_FF:dff0|q at LCFF_X44_Y22_N11
+V87_q = DFFEAS(T2L3, GLOBAL(A1L92), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V88_q is bank:b1|L4:light_4|D_FF:dff1|q at LCFF_X44_Y22_N5
+V88_q = DFFEAS(T2L2, GLOBAL(A1L92), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--D3L2 is mux8to1:col_1_red|Mux0~0 at LCCOMB_X45_Y22_N16
+D3L2 = (V87_q & (!V88_q & !V109_q));
+
+
+--D3L3 is mux8to1:col_1_red|Mux0~1 at LCCOMB_X43_Y22_N4
+D3L3 = (D1L3 & ((D1L4 & (V79_q)) # (!D1L4 & ((D3L2))))) # (!D1L3 & (!D1L4));
+
+
+--D3_Mux0 is mux8to1:col_1_red|Mux0 at LCCOMB_X43_Y22_N2
+D3_Mux0 = (D3L3 & ((V83_q) # ((!F1L9)))) # (!D3L3 & (((V81_q & F1L9))));
+
+
+--V91_q is bank:b2|L1:light_1|D_FF:dff0|q at LCFF_X39_Y21_N25
+V91_q = DFFEAS(Q3L3, GLOBAL(A1L94), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V93_q is bank:b2|L2:light_2|D_FF:dff0|q at LCFF_X39_Y21_N23
+V93_q = DFFEAS(R3L4, GLOBAL(A1L94), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V89_q is bank:b2|L0:light_0|D_FF:dff0|q at LCFF_X39_Y21_N21
+V89_q = DFFEAS(P3L3, GLOBAL(A1L94), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V97_q is bank:b2|L4:light_4|D_FF:dff0|q at LCFF_X39_Y21_N15
+V97_q = DFFEAS(T3L3, GLOBAL(A1L94), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V98_q is bank:b2|L4:light_4|D_FF:dff1|q at LCFF_X39_Y21_N17
+V98_q = DFFEAS(T3L2, GLOBAL(A1L94), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--D5L2 is mux8to1:col_2_red|Mux0~0 at LCCOMB_X40_Y22_N6
+D5L2 = (V97_q & (!V109_q & !V98_q));
+
+
+--D5L3 is mux8to1:col_2_red|Mux0~1 at LCCOMB_X40_Y22_N16
+D5L3 = (D1L4 & (((V89_q & D1L3)))) # (!D1L4 & ((D5L2) # ((!D1L3))));
+
+
+--D5_Mux0 is mux8to1:col_2_red|Mux0 at LCCOMB_X40_Y21_N12
+D5_Mux0 = (D5L3 & ((V93_q) # ((!F1L9)))) # (!D5L3 & (((V91_q & F1L9))));
+
+
+--V101_q is bank:b3|L1:light_1|D_FF:dff0|q at LCFF_X14_Y22_N1
+V101_q = DFFEAS(Q4L3, GLOBAL(A1L96), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V103_q is bank:b3|L2:light_2|D_FF:dff0|q at LCFF_X14_Y22_N7
+V103_q = DFFEAS(R4L4, GLOBAL(A1L96), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V99_q is bank:b3|L0:light_0|D_FF:dff0|q at LCFF_X14_Y22_N25
+V99_q = DFFEAS(P4L3, GLOBAL(A1L96), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V107_q is bank:b3|L4:light_4|D_FF:dff0|q at LCFF_X14_Y22_N11
+V107_q = DFFEAS(UNCONNECTED_DATAIN, GLOBAL(A1L96), !GLOBAL(A1L40),  ,  , T4L3,  ,  , VCC);
+
+
+--V108_q is bank:b3|L4:light_4|D_FF:dff1|q at LCFF_X14_Y22_N5
+V108_q = DFFEAS(UNCONNECTED_DATAIN, GLOBAL(A1L96), !GLOBAL(A1L40),  ,  , T4L2,  ,  , VCC);
+
+
+--D7L2 is mux8to1:col_3_red|Mux0~0 at LCCOMB_X15_Y22_N24
+D7L2 = (V107_q & (!V108_q & !V109_q));
+
+
+--D7L3 is mux8to1:col_3_red|Mux0~1 at LCCOMB_X40_Y22_N18
+D7L3 = (D1L4 & (V99_q & ((D1L3)))) # (!D1L4 & (((D7L2) # (!D1L3))));
+
+
+--D7_Mux0 is mux8to1:col_3_red|Mux0 at LCCOMB_X40_Y22_N20
+D7_Mux0 = (F1L9 & ((D7L3 & ((V103_q))) # (!D7L3 & (V101_q)))) # (!F1L9 & (((D7L3))));
+
+
+--V75_q is bank:b0|L3:light_3|D_FF:dff0|q at LCFF_X39_Y22_N7
+V75_q = DFFEAS(S1L4, GLOBAL(A1L90), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--D2L1 is mux8to1:col_0_green|Mux0~0 at LCCOMB_X40_Y22_N2
+D2L1 = (V109_q & (V75_q & (!V110_q & !V111_q)));
+
+
+--V85_q is bank:b1|L3:light_3|D_FF:dff0|q at LCFF_X44_Y22_N3
+V85_q = DFFEAS(S2L4, GLOBAL(A1L92), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--D4L1 is mux8to1:col_1_green|Mux0~0 at LCCOMB_X43_Y22_N24
+D4L1 = (!V110_q & (!V111_q & (V109_q & V85_q)));
+
+
+--V95_q is bank:b2|L3:light_3|D_FF:dff0|q at LCFF_X39_Y21_N3
+V95_q = DFFEAS(S3L4, GLOBAL(A1L94), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--D6L1 is mux8to1:col_2_green|Mux0~0 at LCCOMB_X43_Y22_N26
+D6L1 = (V109_q & (V95_q & (!V110_q & !V111_q)));
+
+
+--V105_q is bank:b3|L3:light_3|D_FF:dff0|q at LCFF_X14_Y22_N3
+V105_q = DFFEAS(S4L4, GLOBAL(A1L96), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--D8L1 is mux8to1:col_3_green|Mux0~0 at LCCOMB_X43_Y22_N12
+D8L1 = (!V110_q & (V105_q & (V109_q & !V111_q)));
+
+
+--KB1L45 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~26 at LCCOMB_X3_Y21_N4
+KB1L45 = (KB1L7 & EB1_count[6]);
+
+
+--KB1L46 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~27 at LCCOMB_X3_Y21_N6
+KB1L46 = (KB1L5 & !KB1L7);
+
+
+--KB1L43 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~28 at LCCOMB_X3_Y21_N20
+KB1L43 = (EB1_count[5] & KB1L7);
+
+
+--KB1L44 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~29 at LCCOMB_X3_Y21_N2
+KB1L44 = (KB1L3 & !KB1L7);
+
+
+--KB1L41 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~30 at LCCOMB_X3_Y21_N0
+KB1L41 = (EB1_count[4] & KB1L7);
+
+
+--KB1L42 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~31 at LCCOMB_X3_Y21_N8
+KB1L42 = (KB1L1 & !KB1L7);
+
+
+--KB1L39 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~32 at LCCOMB_X4_Y21_N8
+KB1L39 = (EB1_count[3] & KB1L7);
+
+
+--KB1L40 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~33 at LCCOMB_X4_Y21_N26
+KB1L40 = (EB1_count[3] & !KB1L7);
+
+
+--KB1L53 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~34 at LCCOMB_X4_Y21_N16
+KB1L53 = (!KB1L17 & KB1L13);
+
+
+--KB1L51 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~35 at LCCOMB_X4_Y21_N14
+KB1L51 = (!KB1L17 & KB1L11);
+
+
+--KB1L49 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~36 at LCCOMB_X4_Y21_N28
+KB1L49 = (EB1_count[3] & KB1L17);
+
+
+--KB1L50 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~37 at LCCOMB_X4_Y21_N30
+KB1L50 = (KB1L9 & !KB1L17);
+
+
+--KB1L47 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~38 at LCCOMB_X5_Y21_N4
+KB1L47 = (KB1L17 & EB1_count[2]);
+
+
+--KB1L48 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~39 at LCCOMB_X5_Y21_N2
+KB1L48 = (!KB1L17 & EB1_count[2]);
+
+
+--KB1L61 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~40 at LCCOMB_X5_Y21_N28
+KB1L61 = (KB1L23 & !KB1L27);
+
+
+--KB1L59 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~41 at LCCOMB_X5_Y21_N30
+KB1L59 = (KB1L21 & !KB1L27);
+
+
+--KB1L57 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~42 at LCCOMB_X5_Y21_N0
+KB1L57 = (EB1_count[2] & KB1L27);
+
+
+--KB1L58 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~43 at LCCOMB_X5_Y21_N6
+KB1L58 = (KB1L19 & !KB1L27);
+
+
+--KB1L55 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~44 at LCCOMB_X6_Y21_N24
+KB1L55 = (EB1_count[1] & KB1L27);
+
+
+--KB1L56 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~45 at LCCOMB_X6_Y21_N26
+KB1L56 = (EB1_count[1] & !KB1L27);
+
+
+--GB2L6 is score_keep:sk|display:comb_3|seg7:td|WideOr4~0 at LCCOMB_X4_Y21_N20
+GB2L6 = (KB1L27 & (KB1L17 $ (((KB1L37) # (!KB1L7))))) # (!KB1L27 & (((!KB1L7))));
+
+
+--GB2L7 is score_keep:sk|display:comb_3|seg7:td|leds[2]~0 at LCCOMB_X4_Y21_N6
+GB2L7 = (!KB1L17 & (KB1L7 & (KB1L37 $ (KB1L27))));
+
+
+--GB2L1 is score_keep:sk|display:comb_3|seg7:td|Decoder0~0 at LCCOMB_X4_Y21_N4
+GB2L1 = (KB1L37 & (KB1L17 & (!KB1L27 & KB1L7)));
+
+
+--GB2L5 is score_keep:sk|display:comb_3|seg7:td|WideOr3~0 at LCCOMB_X4_Y21_N22
+GB2L5 = (KB1L27 & (KB1L17 $ (((KB1L37) # (!KB1L7))))) # (!KB1L27 & (((!KB1L37 & !KB1L17)) # (!KB1L7)));
+
+
+--GB2L4 is score_keep:sk|display:comb_3|seg7:td|WideOr2~0 at LCCOMB_X4_Y21_N12
+GB2L4 = (KB1L27 & ((KB1L17 & (!KB1L37)) # (!KB1L17 & ((KB1L7))))) # (!KB1L27 & (!KB1L37 & ((KB1L7))));
+
+
+--GB2L3 is score_keep:sk|display:comb_3|seg7:td|WideOr1~0 at LCCOMB_X4_Y21_N18
+GB2L3 = (KB1L7 & ((KB1L37 & (KB1L17 & !KB1L27)) # (!KB1L37 & ((KB1L17) # (!KB1L27)))));
+
+
+--GB2L2 is score_keep:sk|display:comb_3|seg7:td|WideOr0~0 at LCCOMB_X4_Y21_N0
+GB2L2 = ((KB1L17 & ((!KB1L27))) # (!KB1L17 & ((KB1L37) # (KB1L27)))) # (!KB1L7);
+
+
+--KB2L45 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~26 at LCCOMB_X10_Y21_N20
+KB2L45 = (KB2L7 & EB1_count[6]);
+
+
+--KB2L46 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~27 at LCCOMB_X11_Y21_N24
+KB2L46 = (KB2L5 & !KB2L7);
+
+
+--KB2L43 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~28 at LCCOMB_X10_Y21_N2
+KB2L43 = (EB1_count[5] & KB2L7);
+
+
+--KB2L44 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~29 at LCCOMB_X10_Y21_N4
+KB2L44 = (KB2L3 & !KB2L7);
+
+
+--KB2L41 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~30 at LCCOMB_X10_Y21_N18
+KB2L41 = (EB1_count[4] & KB2L7);
+
+
+--KB2L42 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~31 at LCCOMB_X10_Y21_N6
+KB2L42 = (KB2L1 & !KB2L7);
+
+
+--KB2L39 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~32 at LCCOMB_X9_Y21_N0
+KB2L39 = (EB1_count[3] & KB2L7);
+
+
+--KB2L40 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~33 at LCCOMB_X10_Y21_N0
+KB2L40 = (EB1_count[3] & !KB2L7);
+
+
+--KB2L53 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~34 at LCCOMB_X9_Y21_N10
+KB2L53 = (KB2L13 & !KB2L17);
+
+
+--KB2L51 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~35 at LCCOMB_X9_Y21_N20
+KB2L51 = (KB2L11 & !KB2L17);
+
+
+--KB2L49 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~36 at LCCOMB_X9_Y21_N18
+KB2L49 = (EB1_count[3] & KB2L17);
+
+
+--KB2L50 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~37 at LCCOMB_X9_Y21_N12
+KB2L50 = (KB2L9 & !KB2L17);
+
+
+--KB2L47 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~38 at LCCOMB_X9_Y21_N14
+KB2L47 = (KB2L17 & EB1_count[2]);
+
+
+--KB2L48 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~39 at LCCOMB_X9_Y21_N16
+KB2L48 = (!KB2L17 & EB1_count[2]);
+
+
+--KB2L55 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~40 at LCCOMB_X8_Y21_N8
+KB2L55 = (EB1_count[1] & KB2L27);
+
+
+--KB2L56 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~41 at LCCOMB_X8_Y21_N10
+KB2L56 = (EB1_count[1] & !KB2L27);
+
+
+--KB2L61 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~42 at LCCOMB_X9_Y21_N6
+KB2L61 = (KB2L23 & !KB2L27);
+
+
+--KB2L59 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~43 at LCCOMB_X8_Y21_N4
+KB2L59 = (KB2L21 & !KB2L27);
+
+
+--KB2L57 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~44 at LCCOMB_X8_Y21_N30
+KB2L57 = (EB1_count[2] & KB2L27);
+
+
+--KB2L58 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~45 at LCCOMB_X8_Y21_N28
+KB2L58 = (KB2L19 & !KB2L27);
+
+
+--KB2L63 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[31]~46 at LCCOMB_X7_Y21_N12
+KB2L63 = (KB2L37 & (EB1_count[1])) # (!KB2L37 & ((KB2L29)));
+
+
+--KB2L64 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[32]~47 at LCCOMB_X7_Y21_N2
+KB2L64 = (KB2L37 & ((KB2L58) # ((KB2L57)))) # (!KB2L37 & (((KB2L31))));
+
+
+--KB2L65 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[33]~48 at LCCOMB_X8_Y21_N6
+KB2L65 = (KB2L37 & ((KB2L59) # ((KB2L60)))) # (!KB2L37 & (((KB2L33))));
+
+
+--GB1L12 is score_keep:sk|display:comb_3|seg7:ud|WideOr4~0 at LCCOMB_X7_Y21_N4
+GB1L12 = (KB2L63 & (((KB2L65)))) # (!KB2L63 & (KB2L64 $ (((EB1_count[0] & !KB2L65)))));
+
+
+--GB1L13 is score_keep:sk|display:comb_3|seg7:ud|leds[2]~2 at LCCOMB_X7_Y21_N22
+GB1L13 = (KB2L31 & (KB2L29 $ (EB1_count[0])));
+
+
+--GB1L14 is score_keep:sk|display:comb_3|seg7:ud|leds[2]~3 at LCCOMB_X8_Y21_N22
+GB1L14 = (KB2L58 & (EB1_count[0] $ ((EB1_count[1])))) # (!KB2L58 & (KB2L57 & (EB1_count[0] $ (EB1_count[1]))));
+
+
+--GB1L15 is score_keep:sk|display:comb_3|seg7:ud|leds[2]~4 at LCCOMB_X7_Y21_N0
+GB1L15 = (KB2L37 & (GB1L16)) # (!KB2L37 & (((GB1L13 & !KB2L33))));
+
+
+--GB1L1 is score_keep:sk|display:comb_3|seg7:ud|Decoder0~0 at LCCOMB_X7_Y21_N18
+GB1L1 = (KB2L63 & (!KB2L64 & (!EB1_count[0] & !KB2L65)));
+
+
+--GB1L11 is score_keep:sk|display:comb_3|seg7:ud|WideOr3~0 at LCCOMB_X7_Y21_N28
+GB1L11 = (KB2L63 & ((KB2L65) # ((KB2L64 & EB1_count[0])))) # (!KB2L63 & (KB2L64 $ (((EB1_count[0] & !KB2L65)))));
+
+
+--GB1L10 is score_keep:sk|display:comb_3|seg7:ud|WideOr2~0 at LCCOMB_X7_Y21_N10
+GB1L10 = (KB2L63 & (((EB1_count[0] & !KB2L65)))) # (!KB2L63 & ((KB2L64 & ((!KB2L65))) # (!KB2L64 & (EB1_count[0]))));
+
+
+--GB1L6 is score_keep:sk|display:comb_3|seg7:ud|WideOr1~2 at LCCOMB_X7_Y21_N16
+GB1L6 = (KB2L29 & ((EB1_count[0]) # (!KB2L31))) # (!KB2L29 & (EB1_count[0] & !KB2L31));
+
+
+--GB1L7 is score_keep:sk|display:comb_3|seg7:ud|WideOr1~3 at LCCOMB_X8_Y21_N0
+GB1L7 = (EB1_count[0] & ((EB1_count[1]) # ((!KB2L58 & !KB2L57)))) # (!EB1_count[0] & (!KB2L58 & (EB1_count[1] & !KB2L57)));
+
+
+--GB1L8 is score_keep:sk|display:comb_3|seg7:ud|WideOr1~4 at LCCOMB_X7_Y21_N26
+GB1L8 = (KB2L37 & (((GB1L9)))) # (!KB2L37 & (GB1L6 & ((!KB2L33))));
+
+
+--GB1L2 is score_keep:sk|display:comb_3|seg7:ud|WideOr0~2 at LCCOMB_X7_Y21_N24
+GB1L2 = (KB2L29 & ((!KB2L31) # (!EB1_count[0]))) # (!KB2L29 & ((KB2L31)));
+
+
+--GB1L3 is score_keep:sk|display:comb_3|seg7:ud|WideOr0~3 at LCCOMB_X7_Y21_N30
+GB1L3 = (EB1_count[1] & (((!KB2L58 & !KB2L57)) # (!EB1_count[0]))) # (!EB1_count[1] & ((KB2L58) # ((KB2L57))));
+
+
+--GB1L4 is score_keep:sk|display:comb_3|seg7:ud|WideOr0~4 at LCCOMB_X7_Y21_N20
+GB1L4 = (KB2L37 & (((GB1L5)))) # (!KB2L37 & ((GB1L2) # ((KB2L33))));
+
+
+--EB1_maxcount[6] is score_keep:sk|score_counter:sc|maxcount[6] at LCFF_X12_Y22_N1
+EB1_maxcount[6] = DFFEAS(EB1L65, GLOBAL(A1L98), !GLOBAL(A1L40),  , EB1L25,  ,  ,  ,  );
+
+
+--EB1_maxcount[5] is score_keep:sk|score_counter:sc|maxcount[5] at LCFF_X12_Y22_N31
+EB1_maxcount[5] = DFFEAS(UNCONNECTED_DATAIN, GLOBAL(A1L98), !GLOBAL(A1L40),  , EB1L25, EB1_count[5],  ,  , VCC);
+
+
+--EB1_maxcount[4] is score_keep:sk|score_counter:sc|maxcount[4] at LCFF_X12_Y22_N21
+EB1_maxcount[4] = DFFEAS(EB1L62, GLOBAL(A1L98), !GLOBAL(A1L40),  , EB1L25,  ,  ,  ,  );
+
+
+--KB3L45 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~26 at LCCOMB_X9_Y22_N0
+KB3L45 = (EB1_maxcount[6] & KB3L7);
+
+
+--KB3L46 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~27 at LCCOMB_X9_Y22_N18
+KB3L46 = (KB3L5 & !KB3L7);
+
+
+--KB3L43 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~28 at LCCOMB_X9_Y22_N20
+KB3L43 = (EB1_maxcount[5] & KB3L7);
+
+
+--KB3L44 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~29 at LCCOMB_X9_Y22_N2
+KB3L44 = (!KB3L7 & KB3L3);
+
+
+--KB3L41 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~30 at LCCOMB_X9_Y22_N4
+KB3L41 = (KB3L7 & EB1_maxcount[4]);
+
+
+--KB3L42 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~31 at LCCOMB_X9_Y22_N6
+KB3L42 = (KB3L1 & !KB3L7);
+
+
+--EB1_maxcount[3] is score_keep:sk|score_counter:sc|maxcount[3] at LCFF_X12_Y22_N29
+EB1_maxcount[3] = DFFEAS(EB1L60, GLOBAL(A1L98), !GLOBAL(A1L40),  , EB1L25,  ,  ,  ,  );
+
+
+--KB3L39 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~32 at LCCOMB_X8_Y22_N30
+KB3L39 = (KB3L7 & EB1_maxcount[3]);
+
+
+--KB3L40 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~33 at LCCOMB_X8_Y22_N16
+KB3L40 = (!KB3L7 & EB1_maxcount[3]);
+
+
+--KB3L53 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~34 at LCCOMB_X8_Y22_N10
+KB3L53 = (KB3L13 & !KB3L17);
+
+
+--KB3L51 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~35 at LCCOMB_X8_Y22_N20
+KB3L51 = (KB3L11 & !KB3L17);
+
+
+--KB3L49 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~36 at LCCOMB_X8_Y22_N26
+KB3L49 = (EB1_maxcount[3] & KB3L17);
+
+
+--KB3L50 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~37 at LCCOMB_X8_Y22_N12
+KB3L50 = (KB3L9 & !KB3L17);
+
+
+--EB1_maxcount[2] is score_keep:sk|score_counter:sc|maxcount[2] at LCFF_X12_Y22_N27
+EB1_maxcount[2] = DFFEAS(UNCONNECTED_DATAIN, GLOBAL(A1L98), !GLOBAL(A1L40),  , EB1L25, EB1_count[2],  ,  , VCC);
+
+
+--KB3L47 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~38 at LCCOMB_X7_Y22_N16
+KB3L47 = (EB1_maxcount[2] & KB3L17);
+
+
+--KB3L48 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~39 at LCCOMB_X7_Y22_N30
+KB3L48 = (EB1_maxcount[2] & !KB3L17);
+
+
+--KB3L61 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~40 at LCCOMB_X7_Y22_N20
+KB3L61 = (!KB3L27 & KB3L23);
+
+
+--KB3L59 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~41 at LCCOMB_X8_Y22_N14
+KB3L59 = (!KB3L27 & KB3L21);
+
+
+--KB3L57 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~42 at LCCOMB_X7_Y22_N24
+KB3L57 = (EB1_maxcount[2] & KB3L27);
+
+
+--KB3L58 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~43 at LCCOMB_X8_Y22_N24
+KB3L58 = (!KB3L27 & KB3L19);
+
+
+--EB1_maxcount[1] is score_keep:sk|score_counter:sc|maxcount[1] at LCFF_X12_Y22_N25
+EB1_maxcount[1] = DFFEAS(EB1L57, GLOBAL(A1L98), !GLOBAL(A1L40),  , EB1L25,  ,  ,  ,  );
+
+
+--KB3L55 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~44 at LCCOMB_X6_Y22_N16
+KB3L55 = (EB1_maxcount[1] & KB3L27);
+
+
+--KB3L56 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~45 at LCCOMB_X6_Y22_N14
+KB3L56 = (EB1_maxcount[1] & !KB3L27);
+
+
+--GB4L6 is score_keep:sk|display:comb_3|seg7:tmd|WideOr4~0 at LCCOMB_X7_Y22_N22
+GB4L6 = (KB3L27 & (KB3L17 $ (((KB3L37) # (!KB3L7))))) # (!KB3L27 & (((!KB3L7))));
+
+
+--GB4L7 is score_keep:sk|display:comb_3|seg7:tmd|leds[2]~0 at LCCOMB_X7_Y22_N0
+GB4L7 = (!KB3L17 & (KB3L7 & (KB3L37 $ (KB3L27))));
+
+
+--GB4L1 is score_keep:sk|display:comb_3|seg7:tmd|Decoder0~0 at LCCOMB_X7_Y22_N26
+GB4L1 = (KB3L17 & (KB3L37 & (!KB3L27 & KB3L7)));
+
+
+--GB4L5 is score_keep:sk|display:comb_3|seg7:tmd|WideOr3~0 at LCCOMB_X7_Y22_N4
+GB4L5 = (KB3L27 & (KB3L17 $ (((KB3L37) # (!KB3L7))))) # (!KB3L27 & (((!KB3L17 & !KB3L37)) # (!KB3L7)));
+
+
+--GB4L4 is score_keep:sk|display:comb_3|seg7:tmd|WideOr2~0 at LCCOMB_X7_Y22_N2
+GB4L4 = (KB3L27 & ((KB3L17 & (!KB3L37)) # (!KB3L17 & ((KB3L7))))) # (!KB3L27 & (((!KB3L37 & KB3L7))));
+
+
+--GB4L3 is score_keep:sk|display:comb_3|seg7:tmd|WideOr1~0 at LCCOMB_X7_Y22_N28
+GB4L3 = (KB3L7 & ((KB3L17 & ((!KB3L27) # (!KB3L37))) # (!KB3L17 & (!KB3L37 & !KB3L27))));
+
+
+--GB4L2 is score_keep:sk|display:comb_3|seg7:tmd|WideOr0~0 at LCCOMB_X7_Y22_N18
+GB4L2 = ((KB3L17 & ((!KB3L27))) # (!KB3L17 & ((KB3L37) # (KB3L27)))) # (!KB3L7);
+
+
+--EB1_maxcount[0] is score_keep:sk|score_counter:sc|maxcount[0] at LCFF_X12_Y22_N23
+EB1_maxcount[0] = DFFEAS(EB1L55, GLOBAL(A1L98), !GLOBAL(A1L40),  , EB1L25,  ,  ,  ,  );
+
+
+--KB4L45 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~26 at LCCOMB_X8_Y23_N4
+KB4L45 = (KB4L7 & EB1_maxcount[6]);
+
+
+--KB4L46 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~27 at LCCOMB_X8_Y23_N18
+KB4L46 = (KB4L5 & !KB4L7);
+
+
+--KB4L43 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~28 at LCCOMB_X8_Y23_N0
+KB4L43 = (EB1_maxcount[5] & KB4L7);
+
+
+--KB4L44 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~29 at LCCOMB_X8_Y23_N20
+KB4L44 = (KB4L3 & !KB4L7);
+
+
+--KB4L41 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~30 at LCCOMB_X9_Y23_N4
+KB4L41 = (EB1_maxcount[4] & KB4L7);
+
+
+--KB4L42 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~31 at LCCOMB_X9_Y23_N14
+KB4L42 = (KB4L1 & !KB4L7);
+
+
+--KB4L39 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~32 at LCCOMB_X9_Y23_N24
+KB4L39 = (EB1_maxcount[3] & KB4L7);
+
+
+--KB4L40 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~33 at LCCOMB_X8_Y23_N2
+KB4L40 = (EB1_maxcount[3] & !KB4L7);
+
+
+--KB4L53 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~34 at LCCOMB_X7_Y23_N24
+KB4L53 = (KB4L13 & !KB4L17);
+
+
+--KB4L51 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~35 at LCCOMB_X6_Y23_N4
+KB4L51 = (KB4L11 & !KB4L17);
+
+
+--KB4L49 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~36 at LCCOMB_X6_Y23_N10
+KB4L49 = (EB1_maxcount[3] & KB4L17);
+
+
+--KB4L50 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~37 at LCCOMB_X6_Y23_N28
+KB4L50 = (KB4L9 & !KB4L17);
+
+
+--KB4L47 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~38 at LCCOMB_X6_Y23_N2
+KB4L47 = (EB1_maxcount[2] & KB4L17);
+
+
+--KB4L48 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~39 at LCCOMB_X6_Y23_N12
+KB4L48 = (EB1_maxcount[2] & !KB4L17);
+
+
+--KB4L55 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~40 at LCCOMB_X5_Y23_N28
+KB4L55 = (EB1_maxcount[1] & KB4L27);
+
+
+--KB4L56 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~41 at LCCOMB_X5_Y23_N24
+KB4L56 = (EB1_maxcount[1] & !KB4L27);
+
+
+--KB4L61 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~42 at LCCOMB_X6_Y23_N30
+KB4L61 = (KB4L23 & !KB4L27);
+
+
+--KB4L59 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~43 at LCCOMB_X5_Y23_N22
+KB4L59 = (!KB4L27 & KB4L21);
+
+
+--KB4L57 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~44 at LCCOMB_X6_Y23_N0
+KB4L57 = (EB1_maxcount[2] & KB4L27);
+
+
+--KB4L58 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~45 at LCCOMB_X5_Y23_N12
+KB4L58 = (!KB4L27 & KB4L19);
+
+
+--KB4L63 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[31]~46 at LCCOMB_X4_Y23_N12
+KB4L63 = (KB4L37 & (EB1_maxcount[1])) # (!KB4L37 & ((KB4L29)));
+
+
+--KB4L64 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[32]~47 at LCCOMB_X4_Y23_N30
+KB4L64 = (KB4L37 & ((KB4L57) # ((KB4L58)))) # (!KB4L37 & (((KB4L31))));
+
+
+--KB4L65 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[33]~48 at LCCOMB_X5_Y23_N30
+KB4L65 = (KB4L37 & ((KB4L59) # ((KB4L60)))) # (!KB4L37 & (((KB4L33))));
+
+
+--GB3L12 is score_keep:sk|display:comb_3|seg7:umd|WideOr4~0 at LCCOMB_X4_Y23_N16
+GB3L12 = (KB4L63 & (((KB4L65)))) # (!KB4L63 & (KB4L64 $ (((EB1_maxcount[0] & !KB4L65)))));
+
+
+--GB3L13 is score_keep:sk|display:comb_3|seg7:umd|leds[2]~2 at LCCOMB_X4_Y23_N22
+GB3L13 = (KB4L31 & (EB1_maxcount[0] $ (KB4L29)));
+
+
+--GB3L14 is score_keep:sk|display:comb_3|seg7:umd|leds[2]~3 at LCCOMB_X4_Y23_N28
+GB3L14 = (KB4L57 & (EB1_maxcount[1] $ (((EB1_maxcount[0]))))) # (!KB4L57 & (KB4L58 & (EB1_maxcount[1] $ (EB1_maxcount[0]))));
+
+
+--GB3L15 is score_keep:sk|display:comb_3|seg7:umd|leds[2]~4 at LCCOMB_X4_Y23_N2
+GB3L15 = (KB4L37 & (((GB3L16)))) # (!KB4L37 & (!KB4L33 & (GB3L13)));
+
+
+--GB3L1 is score_keep:sk|display:comb_3|seg7:umd|Decoder0~0 at LCCOMB_X4_Y23_N24
+GB3L1 = (KB4L63 & (!KB4L64 & (!EB1_maxcount[0] & !KB4L65)));
+
+
+--GB3L11 is score_keep:sk|display:comb_3|seg7:umd|WideOr3~0 at LCCOMB_X4_Y23_N18
+GB3L11 = (KB4L63 & ((KB4L65) # ((KB4L64 & EB1_maxcount[0])))) # (!KB4L63 & (KB4L64 $ (((EB1_maxcount[0] & !KB4L65)))));
+
+
+--GB3L10 is score_keep:sk|display:comb_3|seg7:umd|WideOr2~0 at LCCOMB_X4_Y23_N0
+GB3L10 = (KB4L63 & (((EB1_maxcount[0] & !KB4L65)))) # (!KB4L63 & ((KB4L64 & ((!KB4L65))) # (!KB4L64 & (EB1_maxcount[0]))));
+
+
+--GB3L6 is score_keep:sk|display:comb_3|seg7:umd|WideOr1~2 at LCCOMB_X4_Y23_N26
+GB3L6 = (KB4L31 & (EB1_maxcount[0] & KB4L29)) # (!KB4L31 & ((EB1_maxcount[0]) # (KB4L29)));
+
+
+--GB3L7 is score_keep:sk|display:comb_3|seg7:umd|WideOr1~3 at LCCOMB_X4_Y23_N4
+GB3L7 = (EB1_maxcount[1] & ((EB1_maxcount[0]) # ((!KB4L57 & !KB4L58)))) # (!EB1_maxcount[1] & (!KB4L57 & (!KB4L58 & EB1_maxcount[0])));
+
+
+--GB3L8 is score_keep:sk|display:comb_3|seg7:umd|WideOr1~4 at LCCOMB_X4_Y23_N6
+GB3L8 = (KB4L37 & (GB3L9)) # (!KB4L37 & (((GB3L6 & !KB4L33))));
+
+
+--GB3L2 is score_keep:sk|display:comb_3|seg7:umd|WideOr0~2 at LCCOMB_X4_Y23_N8
+GB3L2 = (KB4L31 & ((!KB4L29) # (!EB1_maxcount[0]))) # (!KB4L31 & ((KB4L29)));
+
+
+--GB3L3 is score_keep:sk|display:comb_3|seg7:umd|WideOr0~3 at LCCOMB_X4_Y23_N14
+GB3L3 = (EB1_maxcount[1] & (((!KB4L57 & !KB4L58)) # (!EB1_maxcount[0]))) # (!EB1_maxcount[1] & ((KB4L57) # ((KB4L58))));
+
+
+--GB3L4 is score_keep:sk|display:comb_3|seg7:umd|WideOr0~4 at LCCOMB_X4_Y23_N20
+GB3L4 = (KB4L37 & (GB3L5)) # (!KB4L37 & (((GB3L2) # (KB4L33))));
+
+
+--V111L2 is counter_3b:ct|D_FF:dff3|q~0 at LCCOMB_X43_Y22_N8
+V111L2 = V111_q $ (((V110_q & V109_q)));
+
+
+--V110L2 is counter_3b:ct|D_FF:dff2|q~0 at LCCOMB_X43_Y22_N28
+V110L2 = V110_q $ (V109_q);
+
+
+--T1L1 is bank:b0|L4:light_4|Decoder0~0 at LCCOMB_X40_Y22_N28
+T1L1 = (V77_q & !V78_q);
+
+
+--P1L1 is bank:b0|L0:light_0|Equal1~0 at LCCOMB_X39_Y22_N28
+P1L1 = (!V71_q & (!V73_q & (!V75_q & !T1L1)));
+
+
+--N1L1 is bank:b0|encode_top:et|O[0]~2 at LCCOMB_X39_Y22_N18
+N1L1 = (!V75_q & ((V73_q) # ((!V71_q & V69_q))));
+
+
+--V72_q is bank:b0|L1:light_1|D_FF:dff1|q at LCFF_X39_Y22_N17
+V72_q = DFFEAS(Q1L2, GLOBAL(A1L90), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--Q1L3 is bank:b0|L1:light_1|Mux1~0 at LCCOMB_X39_Y22_N8
+Q1L3 = (!V72_q & (V69_q & ((!P1L1) # (!S1L2))));
+
+
+--V74_q is bank:b0|L2:light_2|D_FF:dff1|q at LCFF_X39_Y22_N11
+V74_q = DFFEAS(R1L2, GLOBAL(A1L90), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--P1L2 is bank:b0|L0:light_0|Equal1~1 at LCCOMB_X39_Y22_N0
+P1L2 = (!V75_q & (!T1L1 & ((V73_q) # (V71_q))));
+
+
+--H1_press is random_0:r0|press at LCFF_X40_Y22_N15
+H1_press = DFFEAS(H1L2, GLOBAL(A1L100),  ,  ,  ,  ,  ,  ,  );
+
+
+--P1L3 is bank:b0|L0:light_0|always0~0 at LCCOMB_X39_Y22_N12
+P1L3 = (H1_press & ((KEY[0]) # ((N1L2) # (!P1L1))));
+
+
+--T1L3 is bank:b0|L4:light_4|Mux1~0 at LCCOMB_X40_Y22_N4
+T1L3 = (V77_q & (((KEY[0] & V75_q)) # (!V78_q))) # (!V77_q & (KEY[0] & (V75_q & !V78_q)));
+
+
+--T1L2 is bank:b0|L4:light_4|Mux0~0 at LCCOMB_X40_Y22_N30
+T1L2 = (V75_q & (!KEY[0] & (V78_q $ (!V77_q)))) # (!V75_q & (((!V78_q & V77_q))));
+
+
+--T2L1 is bank:b1|L4:light_4|Decoder0~0 at LCCOMB_X44_Y22_N28
+T2L1 = (!V88_q & V87_q);
+
+
+--P2L1 is bank:b1|L0:light_0|Equal2~0 at LCCOMB_X44_Y22_N18
+P2L1 = (!V81_q & (!V85_q & (!V83_q & !T2L1)));
+
+
+--N2L1 is bank:b1|encode_top:et|O[0]~2 at LCCOMB_X44_Y22_N0
+N2L1 = (!V85_q & ((V83_q) # ((V79_q & !V81_q))));
+
+
+--V82_q is bank:b1|L1:light_1|D_FF:dff1|q at LCFF_X44_Y22_N27
+V82_q = DFFEAS(Q2L2, GLOBAL(A1L92), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--Q2L3 is bank:b1|L1:light_1|Mux1~0 at LCCOMB_X44_Y22_N24
+Q2L3 = (V79_q & (!V82_q & ((!P2L1) # (!S2L2))));
+
+
+--V84_q is bank:b1|L2:light_2|D_FF:dff1|q at LCFF_X43_Y22_N15
+V84_q = DFFEAS(R2L2, GLOBAL(A1L92), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--P2L2 is bank:b1|L0:light_0|Equal2~1 at LCCOMB_X44_Y22_N12
+P2L2 = (!V85_q & (!T2L1 & ((V81_q) # (V83_q))));
+
+
+--J1_press is random_1:r1|press at LCFF_X44_Y22_N23
+J1_press = DFFEAS(UNCONNECTED_DATAIN, GLOBAL(A1L102),  ,  ,  , V26_q,  ,  , VCC);
+
+
+--P2L3 is bank:b1|L0:light_0|always0~0 at LCCOMB_X44_Y22_N8
+P2L3 = (J1_press & ((KEY[1]) # ((N2L2) # (!P2L1))));
+
+
+--T2L3 is bank:b1|L4:light_4|Mux1~0 at LCCOMB_X44_Y22_N10
+T2L3 = (V88_q & (KEY[1] & (V87_q & V85_q))) # (!V88_q & ((V87_q) # ((KEY[1] & V85_q))));
+
+
+--T2L2 is bank:b1|L4:light_4|Mux0~0 at LCCOMB_X44_Y22_N4
+T2L2 = (V85_q & (!KEY[1] & (V87_q $ (!V88_q)))) # (!V85_q & (V87_q & ((!V88_q))));
+
+
+--T3L1 is bank:b2|L4:light_4|Decoder0~0 at LCCOMB_X39_Y21_N12
+T3L1 = (V97_q & !V98_q);
+
+
+--P3L1 is bank:b2|L0:light_0|Equal2~0 at LCCOMB_X39_Y21_N26
+P3L1 = (!V93_q & (!V95_q & (!V91_q & !T3L1)));
+
+
+--N3L1 is bank:b2|encode_top:et|O[0]~2 at LCCOMB_X39_Y21_N0
+N3L1 = (!V95_q & ((V93_q) # ((V89_q & !V91_q))));
+
+
+--V92_q is bank:b2|L1:light_1|D_FF:dff1|q at LCFF_X39_Y21_N31
+V92_q = DFFEAS(Q3L2, GLOBAL(A1L94), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--Q3L3 is bank:b2|L1:light_1|Mux1~0 at LCCOMB_X39_Y21_N24
+Q3L3 = (V89_q & (!V92_q & ((!S3L2) # (!P3L1))));
+
+
+--V94_q is bank:b2|L2:light_2|D_FF:dff1|q at LCFF_X40_Y21_N15
+V94_q = DFFEAS(R3L2, GLOBAL(A1L94), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--P3L2 is bank:b2|L0:light_0|Equal2~1 at LCCOMB_X39_Y21_N4
+P3L2 = (!V95_q & (!T3L1 & ((V93_q) # (V91_q))));
+
+
+--K1_press is random_2:r2|press at LCFF_X39_Y21_N11
+K1_press = DFFEAS(K1L2, GLOBAL(A1L104),  ,  ,  ,  ,  ,  ,  );
+
+
+--P3L3 is bank:b2|L0:light_0|always0~0 at LCCOMB_X39_Y21_N20
+P3L3 = (K1_press & ((KEY[2]) # ((N3L2) # (!P3L1))));
+
+
+--T3L3 is bank:b2|L4:light_4|Mux1~0 at LCCOMB_X39_Y21_N14
+T3L3 = (V98_q & (V95_q & (V97_q & KEY[2]))) # (!V98_q & ((V97_q) # ((V95_q & KEY[2]))));
+
+
+--T3L2 is bank:b2|L4:light_4|Mux0~0 at LCCOMB_X39_Y21_N16
+T3L2 = (V95_q & (!KEY[2] & (V97_q $ (!V98_q)))) # (!V95_q & (V97_q & ((!V98_q))));
+
+
+--T4L1 is bank:b3|L4:light_4|Decoder0~0 at LCCOMB_X15_Y22_N10
+T4L1 = (!V108_q & V107_q);
+
+
+--P4L1 is bank:b3|L0:light_0|Equal2~0 at LCCOMB_X14_Y22_N12
+P4L1 = (!V103_q & (!V101_q & (!T4L1 & !V105_q)));
+
+
+--N4L1 is bank:b3|encode_top:et|O[0]~2 at LCCOMB_X14_Y22_N30
+N4L1 = (!V105_q & ((V103_q) # ((!V101_q & V99_q))));
+
+
+--V102_q is bank:b3|L1:light_1|D_FF:dff1|q at LCFF_X14_Y22_N17
+V102_q = DFFEAS(Q4L2, GLOBAL(A1L96), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--Q4L3 is bank:b3|L1:light_1|Mux1~0 at LCCOMB_X14_Y22_N0
+Q4L3 = (V99_q & (!V102_q & ((!P4L1) # (!S4L2))));
+
+
+--V104_q is bank:b3|L2:light_2|D_FF:dff1|q at LCFF_X14_Y22_N15
+V104_q = DFFEAS(R4L2, GLOBAL(A1L96), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--P4L2 is bank:b3|L0:light_0|Equal2~1 at LCCOMB_X15_Y22_N20
+P4L2 = (!V105_q & (!T4L1 & ((V103_q) # (V101_q))));
+
+
+--L1_press is random_3:r3|press at LCFF_X15_Y22_N7
+L1_press = DFFEAS(L1L2, GLOBAL(A1L106),  ,  ,  ,  ,  ,  ,  );
+
+
+--P4L3 is bank:b3|L0:light_0|always0~0 at LCCOMB_X14_Y22_N24
+P4L3 = (L1_press & ((KEY[3]) # ((N4L2) # (!P4L1))));
+
+
+--T4L3 is bank:b3|L4:light_4|Mux1~0 at LCCOMB_X15_Y22_N8
+T4L3 = (V107_q & (((KEY[3] & V105_q)) # (!V108_q))) # (!V107_q & (KEY[3] & (!V108_q & V105_q)));
+
+
+--T4L2 is bank:b3|L4:light_4|Mux0~0 at LCCOMB_X15_Y22_N14
+T4L2 = (V105_q & (!KEY[3] & (V107_q $ (!V108_q)))) # (!V105_q & (V107_q & ((!V108_q))));
+
+
+--V76_q is bank:b0|L3:light_3|D_FF:dff1|q at LCFF_X39_Y22_N31
+V76_q = DFFEAS(S1L3, GLOBAL(A1L90), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V86_q is bank:b1|L3:light_3|D_FF:dff1|q at LCFF_X45_Y22_N31
+V86_q = DFFEAS(S2L3, GLOBAL(A1L92), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V96_q is bank:b2|L3:light_3|D_FF:dff1|q at LCFF_X40_Y21_N9
+V96_q = DFFEAS(S3L3, GLOBAL(A1L94), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V106_q is bank:b3|L3:light_3|D_FF:dff1|q at LCFF_X14_Y22_N29
+V106_q = DFFEAS(S4L3, GLOBAL(A1L96), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--U4L3 is bank:b3|score:sc|WideOr3~0 at LCCOMB_X14_Y22_N22
+U4L3 = (!V102_q & ((!V107_q) # (!V108_q)));
+
+
+--U4_WideOr1 is bank:b3|score:sc|WideOr1 at LCCOMB_X14_Y22_N20
+U4_WideOr1 = (V102_q) # ((V106_q) # ((V107_q & V108_q)));
+
+
+--U4_WideOr0 is bank:b3|score:sc|WideOr0 at LCCOMB_X14_Y22_N18
+U4_WideOr0 = (V104_q) # ((V108_q & !V107_q));
+
+
+--EB1L46 is score_keep:sk|score_counter:sc|count[5]~29 at LCCOMB_X13_Y22_N30
+EB1L46 = (EB1_count[2]) # ((EB1_count[4]) # (EB1_count[3]));
+
+
+--EB1L47 is score_keep:sk|score_counter:sc|count[5]~30 at LCCOMB_X13_Y22_N28
+EB1L47 = (EB1L46) # ((EB1_count[1] & ((EB1_count[0]) # (!EB1_count[5]))));
+
+
+--EB1L48 is score_keep:sk|score_counter:sc|count[5]~31 at LCCOMB_X13_Y22_N26
+EB1L48 = (EB1_count[6]) # ((EB1_count[5] & (!EB1L49 & EB1L47)) # (!EB1_count[5] & (EB1L49 & !EB1L47)));
+
+
+--G1_divided_clocks[0] is clock_divider:divider|divided_clocks[0] at LCFF_X24_Y20_N1
+G1_divided_clocks[0] = DFFEAS(UNCONNECTED_DATAIN, CLOCK_50,  ,  ,  , G1L3,  ,  , VCC);
+
+
+--Q1L1 is bank:b0|L1:light_1|Mux0~0 at LCCOMB_X39_Y22_N20
+Q1L1 = (!V71_q & (!V72_q & V69_q));
+
+
+--Q1L2 is bank:b0|L1:light_1|Mux0~1 at LCCOMB_X39_Y22_N16
+Q1L2 = (Q1L1 & (S1L2 & P1L1));
+
+
+--A1L33 is Mux4~16 at LCCOMB_X23_Y19_N0
+A1L33 = (clk_SPD[2] & ((!A1L20))) # (!clk_SPD[2] & (!A1L18));
+
+
+--A1L34 is Mux4~17 at LCCOMB_X23_Y19_N18
+A1L34 = (clk_SPD[2] & (!A1L24)) # (!clk_SPD[2] & ((!A1L22)));
+
+
+--A1L35 is Mux4~18 at LCCOMB_X23_Y20_N30
+A1L35 = (clk_SPD[3] & (A1L34)) # (!clk_SPD[3] & ((A1L33)));
+
+
+--A1L36 is Mux4~19 at LCCOMB_X23_Y20_N20
+A1L36 = (clk_SPD[2] & (!A1L28)) # (!clk_SPD[2] & ((!A1L26)));
+
+
+--A1L37 is Mux4~20 at LCCOMB_X23_Y20_N2
+A1L37 = (clk_SPD[2] & ((!A1L32))) # (!clk_SPD[2] & (!A1L30));
+
+
+--A1L38 is Mux4~21 at LCCOMB_X23_Y20_N14
+A1L38 = (clk_SPD[3] & ((A1L37))) # (!clk_SPD[3] & (A1L36));
+
+
+--A1L89 is rtl~0 at LCCOMB_X23_Y20_N24
+A1L89 = LCELL((clk_SPD[4] & ((!A1L38))) # (!clk_SPD[4] & (!A1L35)));
+
+
+--V9_q is random_0:r0|LFSR_9b:lfsr1|D_FF:dff8|q at LCFF_X42_Y22_N17
+V9_q = DFFEAS(V9L2, GLOBAL(A1L100), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--Q2L1 is bank:b1|L1:light_1|Mux0~0 at LCCOMB_X44_Y22_N22
+Q2L1 = (!V82_q & (V79_q & !V81_q));
+
+
+--Q2L2 is bank:b1|L1:light_1|Mux0~1 at LCCOMB_X44_Y22_N26
+Q2L2 = (Q2L1 & (S2L2 & P2L1));
+
+
+--V26_q is random_1:r1|LFSR_8b:lfsr1|D_FF:dff7|q at LCFF_X44_Y23_N17
+V26_q = DFFEAS(V26L2, GLOBAL(A1L102), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--Q3L1 is bank:b2|L1:light_1|Mux0~0 at LCCOMB_X39_Y21_N28
+Q3L1 = (!V91_q & (V89_q & !V92_q));
+
+
+--Q3L2 is bank:b2|L1:light_1|Mux0~1 at LCCOMB_X39_Y21_N30
+Q3L2 = (Q3L1 & (P3L1 & S3L2));
+
+
+--V41_q is random_2:r2|LFSR_7b:lfsr1|D_FF:dff6|q at LCFF_X38_Y22_N17
+V41_q = DFFEAS(V41L2, GLOBAL(A1L104), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--Q4L1 is bank:b3|L1:light_1|Mux0~0 at LCCOMB_X14_Y22_N10
+Q4L1 = (V99_q & (!V102_q & !V101_q));
+
+
+--Q4L2 is bank:b3|L1:light_1|Mux0~1 at LCCOMB_X14_Y22_N16
+Q4L2 = (Q4L1 & (S4L2 & P4L1));
+
+
+--V58_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff9|q at LCFF_X16_Y22_N25
+V58_q = DFFEAS(V58L2, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V8_q is random_0:r0|LFSR_9b:lfsr1|D_FF:dff7|q at LCFF_X42_Y22_N7
+V8_q = DFFEAS(UNCONNECTED_DATAIN, GLOBAL(A1L100), !GLOBAL(A1L40),  ,  , V7_q,  ,  , VCC);
+
+
+--V25_q is random_1:r1|LFSR_8b:lfsr1|D_FF:dff6|q at LCFF_X44_Y23_N31
+V25_q = DFFEAS(V25L2, GLOBAL(A1L102), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V40_q is random_2:r2|LFSR_7b:lfsr1|D_FF:dff5|q at LCFF_X38_Y22_N23
+V40_q = DFFEAS(V40L2, GLOBAL(A1L104), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V57_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff8|q at LCFF_X16_Y22_N27
+V57_q = DFFEAS(V57L2, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V7_q is random_0:r0|LFSR_9b:lfsr1|D_FF:dff6|q at LCFF_X42_Y22_N21
+V7_q = DFFEAS(V7L2, GLOBAL(A1L100), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V24_q is random_1:r1|LFSR_8b:lfsr1|D_FF:dff5|q at LCFF_X44_Y23_N29
+V24_q = DFFEAS(V24L2, GLOBAL(A1L102), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V39_q is random_2:r2|LFSR_7b:lfsr1|D_FF:dff4|q at LCFF_X38_Y22_N29
+V39_q = DFFEAS(V39L2, GLOBAL(A1L104), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V56_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff7|q at LCFF_X16_Y22_N13
+V56_q = DFFEAS(V56L2, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V6_q is random_0:r0|LFSR_9b:lfsr1|D_FF:dff5|q at LCFF_X42_Y22_N19
+V6_q = DFFEAS(V6L2, GLOBAL(A1L100), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V23_q is random_1:r1|LFSR_8b:lfsr1|D_FF:dff4|q at LCFF_X44_Y23_N27
+V23_q = DFFEAS(V23L2, GLOBAL(A1L102), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V38_q is random_2:r2|LFSR_7b:lfsr1|D_FF:dff3|q at LCFF_X38_Y22_N11
+V38_q = DFFEAS(V38L2, GLOBAL(A1L104), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V55_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff6|q at LCFF_X16_Y22_N11
+V55_q = DFFEAS(V55L2, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V5_q is random_0:r0|LFSR_9b:lfsr1|D_FF:dff4|q at LCFF_X42_Y22_N29
+V5_q = DFFEAS(V5L2, GLOBAL(A1L100), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V22_q is random_1:r1|LFSR_8b:lfsr1|D_FF:dff3|q at LCFF_X44_Y23_N1
+V22_q = DFFEAS(V22L2, GLOBAL(A1L102), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V37_q is random_2:r2|LFSR_7b:lfsr1|D_FF:dff2|q at LCFF_X38_Y22_N13
+V37_q = DFFEAS(V37L2, GLOBAL(A1L104), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V54_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff5|q at LCFF_X16_Y22_N29
+V54_q = DFFEAS(V54L2, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V4_q is random_0:r0|LFSR_9b:lfsr1|D_FF:dff3|q at LCFF_X42_Y22_N3
+V4_q = DFFEAS(V4L2, GLOBAL(A1L100), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V21_q is random_1:r1|LFSR_8b:lfsr1|D_FF:dff2|q at LCFF_X44_Y23_N23
+V21_q = DFFEAS(V21L2, GLOBAL(A1L102), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V36_q is random_2:r2|LFSR_7b:lfsr1|D_FF:dff1|q at LCFF_X38_Y22_N3
+V36_q = DFFEAS(V36L2, GLOBAL(A1L104), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V53_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff4|q at LCFF_X16_Y22_N19
+V53_q = DFFEAS(UNCONNECTED_DATAIN, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  , V52_q,  ,  , VCC);
+
+
+--V3_q is random_0:r0|LFSR_9b:lfsr1|D_FF:dff2|q at LCFF_X42_Y22_N13
+V3_q = DFFEAS(V3L2, GLOBAL(A1L100), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V20_q is random_1:r1|LFSR_8b:lfsr1|D_FF:dff1|q at LCFF_X44_Y23_N25
+V20_q = DFFEAS(V20L2, GLOBAL(A1L102), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V35_q is random_2:r2|LFSR_7b:lfsr1|D_FF:dff0|q at LCFF_X38_Y22_N1
+V35_q = DFFEAS(BB1L1, GLOBAL(A1L104), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V52_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff3|q at LCFF_X16_Y22_N17
+V52_q = DFFEAS(V52L2, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V2_q is random_0:r0|LFSR_9b:lfsr1|D_FF:dff1|q at LCFF_X42_Y22_N23
+V2_q = DFFEAS(V2L2, GLOBAL(A1L100), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--V19_q is random_1:r1|LFSR_8b:lfsr1|D_FF:dff0|q at LCFF_X44_Y23_N3
+V19_q = DFFEAS(AB1L1, GLOBAL(A1L102), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--BB1L1 is random_2:r2|LFSR_7b:lfsr1|comb~0 at LCCOMB_X38_Y22_N0
+BB1L1 = V41_q $ (!V40_q);
+
+
+--V51_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff2|q at LCFF_X16_Y22_N3
+V51_q = DFFEAS(UNCONNECTED_DATAIN, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  , V50_q,  ,  , VCC);
+
+
+--V1_q is random_0:r0|LFSR_9b:lfsr1|D_FF:dff0|q at LCFF_X42_Y22_N1
+V1_q = DFFEAS(X1L1, GLOBAL(A1L100), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--AB1L1 is random_1:r1|LFSR_8b:lfsr1|WideXnor0~0 at LCCOMB_X44_Y23_N2
+AB1L1 = V22_q $ (V23_q $ (V26_q $ (!V24_q)));
+
+
+--V50_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff1|q at LCFF_X16_Y22_N21
+V50_q = DFFEAS(V50L2, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--X1L1 is random_0:r0|LFSR_9b:lfsr1|comb~0 at LCCOMB_X42_Y22_N0
+X1L1 = V9_q $ (!V5_q);
+
+
+--V49_q is random_3:r3|LFSR_10b:lfsr1|D_FF:dff0|q at LCFF_X16_Y22_N23
+V49_q = DFFEAS(CB1L1, GLOBAL(A1L106), !GLOBAL(A1L40),  ,  ,  ,  ,  ,  );
+
+
+--CB1L1 is random_3:r3|LFSR_10b:lfsr1|comb~0 at LCCOMB_X16_Y22_N22
+CB1L1 = V58_q $ (!V55_q);
+
+
+--KB1L62 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~46 at LCCOMB_X4_Y21_N10
+KB1L62 = (KB1L27 & ((KB1L52) # ((!KB1L17 & KB1L11))));
+
+
+--KB2L62 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~49 at LCCOMB_X9_Y21_N8
+KB2L62 = (KB2L27 & ((KB2L52) # ((!KB2L17 & KB2L11))));
+
+
+--GB1L16 is score_keep:sk|display:comb_3|seg7:ud|leds[2]~5 at LCCOMB_X8_Y21_N26
+GB1L16 = (!KB2L60 & (GB1L14 & ((KB2L27) # (!KB2L21))));
+
+
+--GB1L9 is score_keep:sk|display:comb_3|seg7:ud|WideOr1~5 at LCCOMB_X8_Y21_N24
+GB1L9 = (!KB2L60 & (GB1L7 & ((KB2L27) # (!KB2L21))));
+
+
+--GB1L5 is score_keep:sk|display:comb_3|seg7:ud|WideOr0~5 at LCCOMB_X8_Y21_N2
+GB1L5 = (GB1L3) # ((KB2L60) # ((KB2L21 & !KB2L27)));
+
+
+--KB3L62 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~46 at LCCOMB_X8_Y22_N22
+KB3L62 = (KB3L27 & ((KB3L52) # ((!KB3L17 & KB3L11))));
+
+
+--KB4L62 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~49 at LCCOMB_X6_Y23_N6
+KB4L62 = (KB4L27 & ((KB4L52) # ((KB4L11 & !KB4L17))));
+
+
+--GB3L16 is score_keep:sk|display:comb_3|seg7:umd|leds[2]~5 at LCCOMB_X5_Y23_N20
+GB3L16 = (GB3L14 & (!KB4L60 & ((KB4L27) # (!KB4L21))));
+
+
+--GB3L9 is score_keep:sk|display:comb_3|seg7:umd|WideOr1~5 at LCCOMB_X5_Y23_N26
+GB3L9 = (GB3L7 & (!KB4L60 & ((KB4L27) # (!KB4L21))));
+
+
+--GB3L5 is score_keep:sk|display:comb_3|seg7:umd|WideOr0~5 at LCCOMB_X5_Y23_N16
+GB3L5 = (GB3L3) # ((KB4L60) # ((!KB4L27 & KB4L21)));
+
+
+--S1L2 is bank:b0|L3:light_3|Mux0~14 at LCCOMB_X39_Y22_N14
+S1L2 = (!KEY[0] & ((N1L1) # ((!V78_q & V77_q))));
+
+
+--S2L2 is bank:b1|L3:light_3|Mux0~14 at LCCOMB_X44_Y22_N20
+S2L2 = (!KEY[1] & ((N2L1) # ((V87_q & !V88_q))));
+
+
+--S3L2 is bank:b2|L3:light_3|Mux0~14 at LCCOMB_X39_Y21_N6
+S3L2 = (!KEY[2] & ((N3L1) # ((!V98_q & V97_q))));
+
+
+--S4L2 is bank:b3|L3:light_3|Mux0~14 at LCCOMB_X14_Y22_N8
+S4L2 = (!KEY[3] & ((N4L1) # ((V107_q & !V108_q))));
+
+
+--S1L4 is bank:b0|L3:light_3|Mux1~2 at LCCOMB_X39_Y22_N6
+S1L4 = (V73_q & (!V76_q & ((!P1L2) # (!S1L2))));
+
+
+--S2L4 is bank:b1|L3:light_3|Mux1~2 at LCCOMB_X44_Y22_N2
+S2L4 = (V83_q & (!V86_q & ((!P2L2) # (!S2L2))));
+
+
+--S3L4 is bank:b2|L3:light_3|Mux1~2 at LCCOMB_X39_Y21_N2
+S3L4 = (V93_q & (!V96_q & ((!S3L2) # (!P3L2))));
+
+
+--S4L4 is bank:b3|L3:light_3|Mux1~2 at LCCOMB_X14_Y22_N2
+S4L4 = (V103_q & (!V106_q & ((!P4L2) # (!S4L2))));
+
+
+--KB1L54 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~47 at LCCOMB_X3_Y21_N30
+KB1L54 = (KB1L17 & ((KB1L7 & (EB1_count[5])) # (!KB1L7 & ((KB1L3)))));
+
+
+--KB1L52 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~48 at LCCOMB_X4_Y21_N24
+KB1L52 = (KB1L17 & ((KB1L7 & ((EB1_count[4]))) # (!KB1L7 & (KB1L1))));
+
+
+--KB1L60 is score_keep:sk|display:comb_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~49 at LCCOMB_X4_Y21_N2
+KB1L60 = (KB1L27 & ((KB1L17 & ((EB1_count[3]))) # (!KB1L17 & (KB1L9))));
+
+
+--KB2L54 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~50 at LCCOMB_X9_Y21_N2
+KB2L54 = (KB2L17 & ((KB2L7 & (EB1_count[5])) # (!KB2L7 & ((KB2L3)))));
+
+
+--KB2L52 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~51 at LCCOMB_X10_Y21_N30
+KB2L52 = (KB2L17 & ((KB2L7 & ((EB1_count[4]))) # (!KB2L7 & (KB2L1))));
+
+
+--KB2L60 is score_keep:sk|display:comb_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~52 at LCCOMB_X9_Y21_N4
+KB2L60 = (KB2L27 & ((KB2L17 & (EB1_count[3])) # (!KB2L17 & ((KB2L9)))));
+
+
+--KB3L54 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~47 at LCCOMB_X9_Y22_N8
+KB3L54 = (KB3L17 & ((KB3L7 & ((EB1_maxcount[5]))) # (!KB3L7 & (KB3L3))));
+
+
+--KB3L52 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~48 at LCCOMB_X8_Y22_N28
+KB3L52 = (KB3L17 & ((KB3L7 & (EB1_maxcount[4])) # (!KB3L7 & ((KB3L1)))));
+
+
+--KB3L60 is score_keep:sk|display:comb_3|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~49 at LCCOMB_X8_Y22_N18
+KB3L60 = (KB3L27 & ((KB3L17 & (EB1_maxcount[3])) # (!KB3L17 & ((KB3L9)))));
+
+
+--KB4L54 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~50 at LCCOMB_X8_Y23_N16
+KB4L54 = (KB4L17 & ((KB4L7 & ((EB1_maxcount[5]))) # (!KB4L7 & (KB4L3))));
+
+
+--KB4L52 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~51 at LCCOMB_X8_Y23_N30
+KB4L52 = (KB4L17 & ((KB4L7 & (EB1_maxcount[4])) # (!KB4L7 & ((KB4L1)))));
+
+
+--KB4L60 is score_keep:sk|display:comb_3|lpm_divide:Mod1|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~52 at LCCOMB_X6_Y23_N8
+KB4L60 = (KB4L27 & ((KB4L17 & ((EB1_maxcount[3]))) # (!KB4L17 & (KB4L9))));
+
+
+--EB1L49 is score_keep:sk|score_counter:sc|count[5]~32 at LCCOMB_X14_Y22_N26
+EB1L49 = (!V104_q & ((V108_q & ((V107_q))) # (!V108_q & (V102_q))));
+
+
+--N1L2 is bank:b0|encode_top:et|O[0]~3 at LCCOMB_X39_Y22_N4
+N1L2 = (N1L1) # ((V77_q & !V78_q));
+
+
+--N2L2 is bank:b1|encode_top:et|O[0]~3 at LCCOMB_X44_Y22_N14
+N2L2 = (N2L1) # ((V87_q & !V88_q));
+
+
+--N3L2 is bank:b2|encode_top:et|O[0]~3 at LCCOMB_X39_Y21_N8
+N3L2 = (N3L1) # ((V97_q & !V98_q));
+
+
+--N4L2 is bank:b3|encode_top:et|O[0]~3 at LCCOMB_X14_Y22_N4
+N4L2 = (N4L1) # ((V107_q & !V108_q));
+
+
+--R1L4 is bank:b0|L2:light_2|Mux1~15 at LCCOMB_X39_Y22_N22
+R1L4 = (!V74_q & (V71_q & ((KEY[0]) # (R1L3))));
+
+
+--R1L3 is bank:b0|L2:light_2|Mux1~3 at LCCOMB_X39_Y22_N2
+R1L3 = (V75_q) # ((V73_q) # ((V77_q & !V78_q)));
+
+
+--R2L4 is bank:b1|L2:light_2|Mux1~15 at LCCOMB_X44_Y22_N6
+R2L4 = (V81_q & (!V84_q & ((KEY[1]) # (R2L3))));
+
+
+--R2L3 is bank:b1|L2:light_2|Mux1~3 at LCCOMB_X44_Y22_N16
+R2L3 = (V85_q) # ((V83_q) # ((V87_q & !V88_q)));
+
+
+--R3L4 is bank:b2|L2:light_2|Mux1~15 at LCCOMB_X39_Y21_N22
+R3L4 = (V91_q & (!V94_q & ((KEY[2]) # (R3L3))));
+
+
+--R3L3 is bank:b2|L2:light_2|Mux1~3 at LCCOMB_X39_Y21_N18
+R3L3 = (V93_q) # ((V95_q) # ((V97_q & !V98_q)));
+
+
+--R4L4 is bank:b3|L2:light_2|Mux1~15 at LCCOMB_X14_Y22_N6
+R4L4 = (!V104_q & (V101_q & ((R4L3) # (KEY[3]))));
+
+
+--R4L3 is bank:b3|L2:light_2|Mux1~3 at LCCOMB_X15_Y22_N4
+R4L3 = (V103_q) # ((V105_q) # ((V107_q & !V108_q)));
+
+
+--R1L2 is bank:b0|L2:light_2|Mux0~15 at LCCOMB_X39_Y22_N10
+R1L2 = (V71_q & (!V75_q & (R1L1 & !V73_q)));
+
+
+--R1L1 is bank:b0|L2:light_2|Mux0~3 at LCCOMB_X39_Y22_N24
+R1L1 = (!KEY[0] & (!V74_q & ((V78_q) # (!V77_q))));
+
+
+--R2L2 is bank:b1|L2:light_2|Mux0~15 at LCCOMB_X43_Y22_N14
+R2L2 = (!V85_q & (V81_q & (!V83_q & R2L1)));
+
+
+--R2L1 is bank:b1|L2:light_2|Mux0~3 at LCCOMB_X44_Y22_N30
+R2L1 = (!KEY[1] & (!V84_q & ((V88_q) # (!V87_q))));
+
+
+--R3L2 is bank:b2|L2:light_2|Mux0~15 at LCCOMB_X40_Y21_N14
+R3L2 = (!V95_q & (!V93_q & (V91_q & R3L1)));
+
+
+--R3L1 is bank:b2|L2:light_2|Mux0~3 at LCCOMB_X40_Y21_N26
+R3L1 = (!V94_q & (!KEY[2] & ((V98_q) # (!V97_q))));
+
+
+--R4L2 is bank:b3|L2:light_2|Mux0~15 at LCCOMB_X14_Y22_N14
+R4L2 = (!V103_q & (V101_q & (!V104_q & R4L1)));
+
+
+--R4L1 is bank:b3|L2:light_2|Mux0~3 at LCCOMB_X15_Y22_N2
+R4L1 = (!KEY[3] & (!V105_q & ((V108_q) # (!V107_q))));
+
+
+--S1L3 is bank:b0|L3:light_3|Mux0~15 at LCCOMB_X39_Y22_N30
+S1L3 = (!KEY[0] & (V73_q & (!V75_q & S1L1)));
+
+
+--S1L1 is bank:b0|L3:light_3|Mux0~5 at LCCOMB_X39_Y22_N26
+S1L1 = (!V76_q & ((V78_q) # (!V77_q)));
+
+
+--S2L3 is bank:b1|L3:light_3|Mux0~15 at LCCOMB_X45_Y22_N30
+S2L3 = (!V85_q & (!KEY[1] & (V83_q & S2L1)));
+
+
+--S2L1 is bank:b1|L3:light_3|Mux0~5 at LCCOMB_X45_Y22_N0
+S2L1 = (!V86_q & ((V88_q) # (!V87_q)));
+
+
+--S3L3 is bank:b2|L3:light_3|Mux0~15 at LCCOMB_X40_Y21_N8
+S3L3 = (!V95_q & (!KEY[2] & (S3L1 & V93_q)));
+
+
+--S3L1 is bank:b2|L3:light_3|Mux0~5 at LCCOMB_X40_Y21_N20
+S3L1 = (!V96_q & ((V98_q) # (!V97_q)));
+
+
+--S4L3 is bank:b3|L3:light_3|Mux0~15 at LCCOMB_X14_Y22_N28
+S4L3 = (V103_q & (!V105_q & (S4L1 & !KEY[3])));
+
+
+--S4L1 is bank:b3|L3:light_3|Mux0~5 at LCCOMB_X15_Y22_N12
+S4L1 = (!V106_q & ((V108_q) # (!V107_q)));
+
+
+--A1L17 is Mux4~0 at LCCOMB_X23_Y19_N16
+A1L17 = (clk_SPD[1] & (((clk_SPD[0])))) # (!clk_SPD[1] & ((clk_SPD[0] & ((G1_divided_clocks[30]))) # (!clk_SPD[0] & (G1_divided_clocks[31]))));
+
+
+--A1L18 is Mux4~1 at LCCOMB_X23_Y19_N14
+A1L18 = (clk_SPD[1] & ((A1L17 & ((G1_divided_clocks[28]))) # (!A1L17 & (G1_divided_clocks[29])))) # (!clk_SPD[1] & (((A1L17))));
+
+
+--A1L19 is Mux4~2 at LCCOMB_X23_Y19_N8
+A1L19 = (clk_SPD[0] & ((clk_SPD[1]) # ((G1_divided_clocks[26])))) # (!clk_SPD[0] & (!clk_SPD[1] & (G1_divided_clocks[27])));
+
+
+--A1L20 is Mux4~3 at LCCOMB_X23_Y19_N22
+A1L20 = (clk_SPD[1] & ((A1L19 & (G1_divided_clocks[24])) # (!A1L19 & ((G1_divided_clocks[25]))))) # (!clk_SPD[1] & (((A1L19))));
+
+
+--A1L21 is Mux4~4 at LCCOMB_X23_Y19_N26
+A1L21 = (clk_SPD[1] & (((clk_SPD[0])))) # (!clk_SPD[1] & ((clk_SPD[0] & ((G1_divided_clocks[22]))) # (!clk_SPD[0] & (G1_divided_clocks[23]))));
+
+
+--A1L22 is Mux4~5 at LCCOMB_X23_Y19_N6
+A1L22 = (clk_SPD[1] & ((A1L21 & ((G1_divided_clocks[20]))) # (!A1L21 & (G1_divided_clocks[21])))) # (!clk_SPD[1] & (((A1L21))));
+
+
+--A1L23 is Mux4~6 at LCCOMB_X23_Y19_N4
+A1L23 = (clk_SPD[1] & (((clk_SPD[0])))) # (!clk_SPD[1] & ((clk_SPD[0] & ((G1_divided_clocks[18]))) # (!clk_SPD[0] & (G1_divided_clocks[19]))));
+
+
+--A1L24 is Mux4~7 at LCCOMB_X23_Y19_N20
+A1L24 = (clk_SPD[1] & ((A1L23 & (G1_divided_clocks[16])) # (!A1L23 & ((G1_divided_clocks[17]))))) # (!clk_SPD[1] & (((A1L23))));
+
+
+--A1L25 is Mux4~8 at LCCOMB_X23_Y20_N8
+A1L25 = (clk_SPD[1] & (clk_SPD[0])) # (!clk_SPD[1] & ((clk_SPD[0] & (G1_divided_clocks[14])) # (!clk_SPD[0] & ((G1_divided_clocks[15])))));
+
+
+--A1L26 is Mux4~9 at LCCOMB_X23_Y20_N18
+A1L26 = (clk_SPD[1] & ((A1L25 & ((G1_divided_clocks[12]))) # (!A1L25 & (G1_divided_clocks[13])))) # (!clk_SPD[1] & (((A1L25))));
+
+
+--A1L27 is Mux4~10 at LCCOMB_X23_Y20_N16
+A1L27 = (clk_SPD[1] & (((clk_SPD[0])))) # (!clk_SPD[1] & ((clk_SPD[0] & ((G1_divided_clocks[10]))) # (!clk_SPD[0] & (G1_divided_clocks[11]))));
+
+
+--A1L28 is Mux4~11 at LCCOMB_X23_Y20_N4
+A1L28 = (clk_SPD[1] & ((A1L27 & (G1_divided_clocks[8])) # (!A1L27 & ((G1_divided_clocks[9]))))) # (!clk_SPD[1] & (((A1L27))));
+
+
+--A1L29 is Mux4~12 at LCCOMB_X23_Y20_N10
+A1L29 = (clk_SPD[1] & (((clk_SPD[0])))) # (!clk_SPD[1] & ((clk_SPD[0] & (G1_divided_clocks[6])) # (!clk_SPD[0] & ((G1_divided_clocks[7])))));
+
+
+--A1L30 is Mux4~13 at LCCOMB_X23_Y20_N12
+A1L30 = (clk_SPD[1] & ((A1L29 & (G1_divided_clocks[4])) # (!A1L29 & ((G1_divided_clocks[5]))))) # (!clk_SPD[1] & (((A1L29))));
+
+
+--A1L31 is Mux4~14 at LCCOMB_X25_Y20_N30
+A1L31 = (clk_SPD[1] & (((clk_SPD[0])))) # (!clk_SPD[1] & ((clk_SPD[0] & (G1_divided_clocks[2])) # (!clk_SPD[0] & ((G1_divided_clocks[3])))));
+
+
+--A1L32 is Mux4~15 at LCCOMB_X24_Y20_N0
+A1L32 = (clk_SPD[1] & ((A1L31 & ((G1_divided_clocks[0]))) # (!A1L31 & (G1_divided_clocks[1])))) # (!clk_SPD[1] & (((A1L31))));
+
+
+--V109L2 is counter_3b:ct|D_FF:dff1|q~0 at LCCOMB_X43_Y22_N22
+V109L2 = !V109_q;
+
+
+--G1L3 is clock_divider:divider|divided_clocks[0]~93 at LCCOMB_X25_Y20_N14
+G1L3 = !G1_divided_clocks[0];
+
+
+--A1L97 is rtl~4 at LCCOMB_X23_Y20_N6
+A1L97 = LCELL((clk_SPD[4] & ((!A1L38))) # (!clk_SPD[4] & (!A1L35)));
+
+
+--A1L95 is rtl~3 at LCCOMB_X23_Y20_N28
+A1L95 = LCELL((clk_SPD[4] & (!A1L38)) # (!clk_SPD[4] & ((!A1L35))));
+
+
+--A1L93 is rtl~2 at LCCOMB_X22_Y20_N18
+A1L93 = LCELL((clk_SPD[4] & (!A1L38)) # (!clk_SPD[4] & ((!A1L35))));
+
+
+--A1L91 is rtl~1 at LCCOMB_X23_Y20_N22
+A1L91 = LCELL((clk_SPD[4] & (!A1L38)) # (!clk_SPD[4] & ((!A1L35))));
+
+
+--A1L105 is rtl~8 at LCCOMB_X23_Y20_N26
+A1L105 = LCELL((clk_SPD[4] & (!A1L38)) # (!clk_SPD[4] & ((!A1L35))));
+
+
+--A1L103 is rtl~7 at LCCOMB_X22_Y20_N0
+A1L103 = LCELL((clk_SPD[4] & (!A1L38)) # (!clk_SPD[4] & ((!A1L35))));
+
+
+--A1L101 is rtl~6 at LCCOMB_X22_Y20_N2
+A1L101 = LCELL((clk_SPD[4] & (!A1L38)) # (!clk_SPD[4] & ((!A1L35))));
+
+
+--A1L99 is rtl~5 at LCCOMB_X23_Y20_N0
+A1L99 = LCELL((clk_SPD[4] & (!A1L38)) # (!clk_SPD[4] & ((!A1L35))));
+
+
+--Row[0] is Row[0] at PIN_C21
+--operation mode is output
+
+Row[0] = OUTPUT(!F1L1);
+
+
+--Row[1] is Row[1] at PIN_A19
+--operation mode is output
+
+Row[1] = OUTPUT(!F1L2);
+
+
+--Row[2] is Row[2] at PIN_F21
+--operation mode is output
+
+Row[2] = OUTPUT(!F1L3);
+
+
+--Row[3] is Row[3] at PIN_D21
+--operation mode is output
+
+Row[3] = OUTPUT(!F1L4);
+
+
+--Row[4] is Row[4] at PIN_A18
+--operation mode is output
+
+Row[4] = OUTPUT(!F1L5);
+
+
+--Row[5] is Row[5] at PIN_A16
+--operation mode is output
+
+Row[5] = OUTPUT(!F1L6);
+
+
+--Row[6] is Row[6] at PIN_K21
+--operation mode is output
+
+Row[6] = OUTPUT(!F1L7);
+
+
+--Row[7] is Row[7] at PIN_G21
+--operation mode is output
+
+Row[7] = OUTPUT(!F1L8);
+
+
+--Col_R[0] is Col_R[0] at PIN_A17
+--operation mode is output
+
+Col_R[0] = OUTPUT(D1_Mux0);
+
+
+--Col_R[1] is Col_R[1] at PIN_B17
+--operation mode is output
+
+Col_R[1] = OUTPUT(D3_Mux0);
+
+
+--Col_R[2] is Col_R[2] at PIN_E21
+--operation mode is output
+
+Col_R[2] = OUTPUT(D5_Mux0);
+
+
+--Col_R[3] is Col_R[3] at PIN_E22
+--operation mode is output
+
+Col_R[3] = OUTPUT(D7_Mux0);
+
+
+--Col_G[0] is Col_G[0] at PIN_B16
+--operation mode is output
+
+Col_G[0] = OUTPUT(D2L1);
+
+
+--Col_G[1] is Col_G[1] at PIN_B18
+--operation mode is output
+
+Col_G[1] = OUTPUT(D4L1);
+
+
+--Col_G[2] is Col_G[2] at PIN_D22
+--operation mode is output
+
+Col_G[2] = OUTPUT(D6L1);
+
+
+--Col_G[3] is Col_G[3] at PIN_F22
+--operation mode is output
+
+Col_G[3] = OUTPUT(D8L1);
+
+
+--hex1[0] is hex1[0] at PIN_E1
+--operation mode is output
+
+hex1[0] = OUTPUT(GB2L6);
+
+
+--hex1[1] is hex1[1] at PIN_H6
+--operation mode is output
+
+hex1[1] = OUTPUT(GB2L7);
+
+
+--hex1[2] is hex1[2] at PIN_H5
+--operation mode is output
+
+hex1[2] = OUTPUT(GB2L1);
+
+
+--hex1[3] is hex1[3] at PIN_H4
+--operation mode is output
+
+hex1[3] = OUTPUT(GB2L5);
+
+
+--hex1[4] is hex1[4] at PIN_G3
+--operation mode is output
+
+hex1[4] = OUTPUT(GB2L4);
+
+
+--hex1[5] is hex1[5] at PIN_D2
+--operation mode is output
+
+hex1[5] = OUTPUT(GB2L3);
+
+
+--hex1[6] is hex1[6] at PIN_D1
+--operation mode is output
+
+hex1[6] = OUTPUT(!GB2L2);
+
+
+--hex0[0] is hex0[0] at PIN_J2
+--operation mode is output
+
+hex0[0] = OUTPUT(GB1L12);
+
+
+--hex0[1] is hex0[1] at PIN_J1
+--operation mode is output
+
+hex0[1] = OUTPUT(GB1L15);
+
+
+--hex0[2] is hex0[2] at PIN_H2
+--operation mode is output
+
+hex0[2] = OUTPUT(GB1L1);
+
+
+--hex0[3] is hex0[3] at PIN_H1
+--operation mode is output
+
+hex0[3] = OUTPUT(GB1L11);
+
+
+--hex0[4] is hex0[4] at PIN_F2
+--operation mode is output
+
+hex0[4] = OUTPUT(GB1L10);
+
+
+--hex0[5] is hex0[5] at PIN_F1
+--operation mode is output
+
+hex0[5] = OUTPUT(GB1L8);
+
+
+--hex0[6] is hex0[6] at PIN_E2
+--operation mode is output
+
+hex0[6] = OUTPUT(!GB1L4);
+
+
+--hex3[0] is hex3[0] at PIN_F4
+--operation mode is output
+
+hex3[0] = OUTPUT(GB4L6);
+
+
+--hex3[1] is hex3[1] at PIN_D5
+--operation mode is output
+
+hex3[1] = OUTPUT(GB4L7);
+
+
+--hex3[2] is hex3[2] at PIN_D6
+--operation mode is output
+
+hex3[2] = OUTPUT(GB4L1);
+
+
+--hex3[3] is hex3[3] at PIN_J4
+--operation mode is output
+
+hex3[3] = OUTPUT(GB4L5);
+
+
+--hex3[4] is hex3[4] at PIN_L8
+--operation mode is output
+
+hex3[4] = OUTPUT(GB4L4);
+
+
+--hex3[5] is hex3[5] at PIN_F3
+--operation mode is output
+
+hex3[5] = OUTPUT(GB4L3);
+
+
+--hex3[6] is hex3[6] at PIN_D4
+--operation mode is output
+
+hex3[6] = OUTPUT(!GB4L2);
+
+
+--hex2[0] is hex2[0] at PIN_G5
+--operation mode is output
+
+hex2[0] = OUTPUT(GB3L12);
+
+
+--hex2[1] is hex2[1] at PIN_G6
+--operation mode is output
+
+hex2[1] = OUTPUT(GB3L15);
+
+
+--hex2[2] is hex2[2] at PIN_C2
+--operation mode is output
+
+hex2[2] = OUTPUT(GB3L1);
+
+
+--hex2[3] is hex2[3] at PIN_C1
+--operation mode is output
+
+hex2[3] = OUTPUT(GB3L11);
+
+
+--hex2[4] is hex2[4] at PIN_E3
+--operation mode is output
+
+hex2[4] = OUTPUT(GB3L10);
+
+
+--hex2[5] is hex2[5] at PIN_E4
+--operation mode is output
+
+hex2[5] = OUTPUT(GB3L8);
+
+
+--hex2[6] is hex2[6] at PIN_D3
+--operation mode is output
+
+hex2[6] = OUTPUT(!GB3L4);
+
+
+--Reset is Reset at PIN_L2
+--operation mode is input
+
+Reset = INPUT();
+
+
+--KEY[0] is KEY[0] at PIN_R22
+--operation mode is input
+
+KEY[0] = INPUT();
+
+
+--KEY[1] is KEY[1] at PIN_R21
+--operation mode is input
+
+KEY[1] = INPUT();
+
+
+--KEY[2] is KEY[2] at PIN_T22
+--operation mode is input
+
+KEY[2] = INPUT();
+
+
+--KEY[3] is KEY[3] at PIN_T21
+--operation mode is input
+
+KEY[3] = INPUT();
+
+
+--CLOCK_50 is CLOCK_50 at PIN_L1
+--operation mode is input
+
+CLOCK_50 = INPUT();
+
+
+--clk_SPD[0] is clk_SPD[0] at PIN_L22
+--operation mode is input
+
+clk_SPD[0] = INPUT();
+
+
+--clk_SPD[1] is clk_SPD[1] at PIN_L21
+--operation mode is input
+
+clk_SPD[1] = INPUT();
+
+
+--clk_SPD[2] is clk_SPD[2] at PIN_M22
+--operation mode is input
+
+clk_SPD[2] = INPUT();
+
+
+--clk_SPD[3] is clk_SPD[3] at PIN_V12
+--operation mode is input
+
+clk_SPD[3] = INPUT();
+
+
+--clk_SPD[4] is clk_SPD[4] at PIN_W12
+--operation mode is input
+
+clk_SPD[4] = INPUT();
+
+
+
+
+
+--A1L90 is rtl~0clkctrl at CLKCTRL_G8
+A1L90 = cycloneii_clkctrl(.INCLK[0] = A1L89) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L106 is rtl~8clkctrl at CLKCTRL_G14
+A1L106 = cycloneii_clkctrl(.INCLK[0] = A1L105) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L98 is rtl~4clkctrl at CLKCTRL_G13
+A1L98 = cycloneii_clkctrl(.INCLK[0] = A1L97) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L40 is Reset~clkctrl at CLKCTRL_G2
+A1L40 = cycloneii_clkctrl(.INCLK[0] = Reset) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L104 is rtl~7clkctrl at CLKCTRL_G3
+A1L104 = cycloneii_clkctrl(.INCLK[0] = A1L103) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L92 is rtl~1clkctrl at CLKCTRL_G10
+A1L92 = cycloneii_clkctrl(.INCLK[0] = A1L91) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L96 is rtl~3clkctrl at CLKCTRL_G15
+A1L96 = cycloneii_clkctrl(.INCLK[0] = A1L95) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L100 is rtl~5clkctrl at CLKCTRL_G11
+A1L100 = cycloneii_clkctrl(.INCLK[0] = A1L99) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L102 is rtl~6clkctrl at CLKCTRL_G12
+A1L102 = cycloneii_clkctrl(.INCLK[0] = A1L101) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L94 is rtl~2clkctrl at CLKCTRL_G0
+A1L94 = cycloneii_clkctrl(.INCLK[0] = A1L93) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--G1L34 is clock_divider:divider|divided_clocks[10]~clkctrl at CLKCTRL_G9
+G1L34 = cycloneii_clkctrl(.INCLK[0] = G1_divided_clocks[10]) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--EB1L65 is score_keep:sk|score_counter:sc|maxcount[6]~feeder at LCCOMB_X12_Y22_N0
+EB1L65 = EB1_count[6];
+
+
+--EB1L62 is score_keep:sk|score_counter:sc|maxcount[4]~feeder at LCCOMB_X12_Y22_N20
+EB1L62 = EB1_count[4];
+
+
+--EB1L60 is score_keep:sk|score_counter:sc|maxcount[3]~feeder at LCCOMB_X12_Y22_N28
+EB1L60 = EB1_count[3];
+
+
+--EB1L57 is score_keep:sk|score_counter:sc|maxcount[1]~feeder at LCCOMB_X12_Y22_N24
+EB1L57 = EB1_count[1];
+
+
+--EB1L55 is score_keep:sk|score_counter:sc|maxcount[0]~feeder at LCCOMB_X12_Y22_N22
+EB1L55 = EB1_count[0];
+
+
+--H1L2 is random_0:r0|press~feeder at LCCOMB_X40_Y22_N14
+H1L2 = V9_q;
+
+
+--K1L2 is random_2:r2|press~feeder at LCCOMB_X39_Y21_N10
+K1L2 = V41_q;
+
+
+--L1L2 is random_3:r3|press~feeder at LCCOMB_X15_Y22_N6
+L1L2 = V58_q;
+
+
+--V9L2 is random_0:r0|LFSR_9b:lfsr1|D_FF:dff8|q~feeder at LCCOMB_X42_Y22_N16
+V9L2 = V8_q;
+
+
+--V26L2 is random_1:r1|LFSR_8b:lfsr1|D_FF:dff7|q~feeder at LCCOMB_X44_Y23_N16
+V26L2 = V25_q;
+
+
+--V41L2 is random_2:r2|LFSR_7b:lfsr1|D_FF:dff6|q~feeder at LCCOMB_X38_Y22_N16
+V41L2 = V40_q;
+
+
+--V58L2 is random_3:r3|LFSR_10b:lfsr1|D_FF:dff9|q~feeder at LCCOMB_X16_Y22_N24
+V58L2 = V57_q;
+
+
+--V25L2 is random_1:r1|LFSR_8b:lfsr1|D_FF:dff6|q~feeder at LCCOMB_X44_Y23_N30
+V25L2 = V24_q;
+
+
+--V40L2 is random_2:r2|LFSR_7b:lfsr1|D_FF:dff5|q~feeder at LCCOMB_X38_Y22_N22
+V40L2 = V39_q;
+
+
+--V57L2 is random_3:r3|LFSR_10b:lfsr1|D_FF:dff8|q~feeder at LCCOMB_X16_Y22_N26
+V57L2 = V56_q;
+
+
+--V7L2 is random_0:r0|LFSR_9b:lfsr1|D_FF:dff6|q~feeder at LCCOMB_X42_Y22_N20
+V7L2 = V6_q;
+
+
+--V24L2 is random_1:r1|LFSR_8b:lfsr1|D_FF:dff5|q~feeder at LCCOMB_X44_Y23_N28
+V24L2 = V23_q;
+
+
+--V39L2 is random_2:r2|LFSR_7b:lfsr1|D_FF:dff4|q~feeder at LCCOMB_X38_Y22_N28
+V39L2 = V38_q;
+
+
+--V56L2 is random_3:r3|LFSR_10b:lfsr1|D_FF:dff7|q~feeder at LCCOMB_X16_Y22_N12
+V56L2 = V55_q;
+
+
+--V6L2 is random_0:r0|LFSR_9b:lfsr1|D_FF:dff5|q~feeder at LCCOMB_X42_Y22_N18
+V6L2 = V5_q;
+
+
+--V23L2 is random_1:r1|LFSR_8b:lfsr1|D_FF:dff4|q~feeder at LCCOMB_X44_Y23_N26
+V23L2 = V22_q;
+
+
+--V38L2 is random_2:r2|LFSR_7b:lfsr1|D_FF:dff3|q~feeder at LCCOMB_X38_Y22_N10
+V38L2 = V37_q;
+
+
+--V55L2 is random_3:r3|LFSR_10b:lfsr1|D_FF:dff6|q~feeder at LCCOMB_X16_Y22_N10
+V55L2 = V54_q;
+
+
+--V5L2 is random_0:r0|LFSR_9b:lfsr1|D_FF:dff4|q~feeder at LCCOMB_X42_Y22_N28
+V5L2 = V4_q;
+
+
+--V22L2 is random_1:r1|LFSR_8b:lfsr1|D_FF:dff3|q~feeder at LCCOMB_X44_Y23_N0
+V22L2 = V21_q;
+
+
+--V37L2 is random_2:r2|LFSR_7b:lfsr1|D_FF:dff2|q~feeder at LCCOMB_X38_Y22_N12
+V37L2 = V36_q;
+
+
+--V54L2 is random_3:r3|LFSR_10b:lfsr1|D_FF:dff5|q~feeder at LCCOMB_X16_Y22_N28
+V54L2 = V53_q;
+
+
+--V4L2 is random_0:r0|LFSR_9b:lfsr1|D_FF:dff3|q~feeder at LCCOMB_X42_Y22_N2
+V4L2 = V3_q;
+
+
+--V21L2 is random_1:r1|LFSR_8b:lfsr1|D_FF:dff2|q~feeder at LCCOMB_X44_Y23_N22
+V21L2 = V20_q;
+
+
+--V36L2 is random_2:r2|LFSR_7b:lfsr1|D_FF:dff1|q~feeder at LCCOMB_X38_Y22_N2
+V36L2 = V35_q;
+
+
+--V3L2 is random_0:r0|LFSR_9b:lfsr1|D_FF:dff2|q~feeder at LCCOMB_X42_Y22_N12
+V3L2 = V2_q;
+
+
+--V20L2 is random_1:r1|LFSR_8b:lfsr1|D_FF:dff1|q~feeder at LCCOMB_X44_Y23_N24
+V20L2 = V19_q;
+
+
+--V52L2 is random_3:r3|LFSR_10b:lfsr1|D_FF:dff3|q~feeder at LCCOMB_X16_Y22_N16
+V52L2 = V51_q;
+
+
+--V2L2 is random_0:r0|LFSR_9b:lfsr1|D_FF:dff1|q~feeder at LCCOMB_X42_Y22_N22
+V2L2 = V1_q;
+
+
+--V50L2 is random_3:r3|LFSR_10b:lfsr1|D_FF:dff1|q~feeder at LCCOMB_X16_Y22_N20
+V50L2 = V49_q;
+
+

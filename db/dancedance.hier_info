@@ -1,0 +1,3529 @@
+|dancedance
+CLOCK_50 => CLOCK_50.IN1
+Reset => Reset.IN10
+clk_SPD[0] => Mux0.IN36
+clk_SPD[0] => Mux1.IN36
+clk_SPD[0] => Mux2.IN36
+clk_SPD[0] => Mux3.IN36
+clk_SPD[0] => Mux4.IN36
+clk_SPD[0] => Mux5.IN36
+clk_SPD[0] => Mux6.IN36
+clk_SPD[0] => Mux7.IN36
+clk_SPD[0] => Mux8.IN36
+clk_SPD[1] => Mux0.IN35
+clk_SPD[1] => Mux1.IN35
+clk_SPD[1] => Mux2.IN35
+clk_SPD[1] => Mux3.IN35
+clk_SPD[1] => Mux4.IN35
+clk_SPD[1] => Mux5.IN35
+clk_SPD[1] => Mux6.IN35
+clk_SPD[1] => Mux7.IN35
+clk_SPD[1] => Mux8.IN35
+clk_SPD[2] => Mux0.IN34
+clk_SPD[2] => Mux1.IN34
+clk_SPD[2] => Mux2.IN34
+clk_SPD[2] => Mux3.IN34
+clk_SPD[2] => Mux4.IN34
+clk_SPD[2] => Mux5.IN34
+clk_SPD[2] => Mux6.IN34
+clk_SPD[2] => Mux7.IN34
+clk_SPD[2] => Mux8.IN34
+clk_SPD[3] => Mux0.IN33
+clk_SPD[3] => Mux1.IN33
+clk_SPD[3] => Mux2.IN33
+clk_SPD[3] => Mux3.IN33
+clk_SPD[3] => Mux4.IN33
+clk_SPD[3] => Mux5.IN33
+clk_SPD[3] => Mux6.IN33
+clk_SPD[3] => Mux7.IN33
+clk_SPD[3] => Mux8.IN33
+clk_SPD[4] => Mux0.IN32
+clk_SPD[4] => Mux1.IN32
+clk_SPD[4] => Mux2.IN32
+clk_SPD[4] => Mux3.IN32
+clk_SPD[4] => Mux4.IN32
+clk_SPD[4] => Mux5.IN32
+clk_SPD[4] => Mux6.IN32
+clk_SPD[4] => Mux7.IN32
+clk_SPD[4] => Mux8.IN32
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+KEY[2] => KEY[2].IN1
+KEY[3] => KEY[3].IN1
+Row[0] <= decoder3to8:decoder.port1
+Row[1] <= decoder3to8:decoder.port1
+Row[2] <= decoder3to8:decoder.port1
+Row[3] <= decoder3to8:decoder.port1
+Row[4] <= decoder3to8:decoder.port1
+Row[5] <= decoder3to8:decoder.port1
+Row[6] <= decoder3to8:decoder.port1
+Row[7] <= decoder3to8:decoder.port1
+Col_R[0] <= mux8to1:col_0_red.port9
+Col_R[1] <= mux8to1:col_1_red.port9
+Col_R[2] <= mux8to1:col_2_red.port9
+Col_R[3] <= mux8to1:col_3_red.port9
+Col_G[0] <= mux8to1:col_0_green.port9
+Col_G[1] <= mux8to1:col_1_green.port9
+Col_G[2] <= mux8to1:col_2_green.port9
+Col_G[3] <= mux8to1:col_3_green.port9
+hex1[0] <= score_keep:sk.port6
+hex1[1] <= score_keep:sk.port6
+hex1[2] <= score_keep:sk.port6
+hex1[3] <= score_keep:sk.port6
+hex1[4] <= score_keep:sk.port6
+hex1[5] <= score_keep:sk.port6
+hex1[6] <= score_keep:sk.port6
+hex0[0] <= score_keep:sk.port7
+hex0[1] <= score_keep:sk.port7
+hex0[2] <= score_keep:sk.port7
+hex0[3] <= score_keep:sk.port7
+hex0[4] <= score_keep:sk.port7
+hex0[5] <= score_keep:sk.port7
+hex0[6] <= score_keep:sk.port7
+hex3[0] <= score_keep:sk.port8
+hex3[1] <= score_keep:sk.port8
+hex3[2] <= score_keep:sk.port8
+hex3[3] <= score_keep:sk.port8
+hex3[4] <= score_keep:sk.port8
+hex3[5] <= score_keep:sk.port8
+hex3[6] <= score_keep:sk.port8
+hex2[0] <= score_keep:sk.port9
+hex2[1] <= score_keep:sk.port9
+hex2[2] <= score_keep:sk.port9
+hex2[3] <= score_keep:sk.port9
+hex2[4] <= score_keep:sk.port9
+hex2[5] <= score_keep:sk.port9
+hex2[6] <= score_keep:sk.port9
+
+
+|dancedance|clock_divider:divider
+clock => divided_clocks[0]~reg0.CLK
+clock => divided_clocks[1]~reg0.CLK
+clock => divided_clocks[2]~reg0.CLK
+clock => divided_clocks[3]~reg0.CLK
+clock => divided_clocks[4]~reg0.CLK
+clock => divided_clocks[5]~reg0.CLK
+clock => divided_clocks[6]~reg0.CLK
+clock => divided_clocks[7]~reg0.CLK
+clock => divided_clocks[8]~reg0.CLK
+clock => divided_clocks[9]~reg0.CLK
+clock => divided_clocks[10]~reg0.CLK
+clock => divided_clocks[11]~reg0.CLK
+clock => divided_clocks[12]~reg0.CLK
+clock => divided_clocks[13]~reg0.CLK
+clock => divided_clocks[14]~reg0.CLK
+clock => divided_clocks[15]~reg0.CLK
+clock => divided_clocks[16]~reg0.CLK
+clock => divided_clocks[17]~reg0.CLK
+clock => divided_clocks[18]~reg0.CLK
+clock => divided_clocks[19]~reg0.CLK
+clock => divided_clocks[20]~reg0.CLK
+clock => divided_clocks[21]~reg0.CLK
+clock => divided_clocks[22]~reg0.CLK
+clock => divided_clocks[23]~reg0.CLK
+clock => divided_clocks[24]~reg0.CLK
+clock => divided_clocks[25]~reg0.CLK
+clock => divided_clocks[26]~reg0.CLK
+clock => divided_clocks[27]~reg0.CLK
+clock => divided_clocks[28]~reg0.CLK
+clock => divided_clocks[29]~reg0.CLK
+clock => divided_clocks[30]~reg0.CLK
+clock => divided_clocks[31]~reg0.CLK
+divided_clocks[0] <= divided_clocks[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[1] <= divided_clocks[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[2] <= divided_clocks[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[3] <= divided_clocks[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[4] <= divided_clocks[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[5] <= divided_clocks[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[6] <= divided_clocks[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[7] <= divided_clocks[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[8] <= divided_clocks[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[9] <= divided_clocks[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[10] <= divided_clocks[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[11] <= divided_clocks[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[12] <= divided_clocks[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[13] <= divided_clocks[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[14] <= divided_clocks[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[15] <= divided_clocks[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[16] <= divided_clocks[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[17] <= divided_clocks[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[18] <= divided_clocks[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[19] <= divided_clocks[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[20] <= divided_clocks[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[21] <= divided_clocks[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[22] <= divided_clocks[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[23] <= divided_clocks[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[24] <= divided_clocks[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[25] <= divided_clocks[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[26] <= divided_clocks[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[27] <= divided_clocks[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[28] <= divided_clocks[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[29] <= divided_clocks[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[30] <= divided_clocks[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+divided_clocks[31] <= divided_clocks[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|random_0:r0
+press <= press~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Clock => Clock.IN2
+Reset => Reset.IN2
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= D_FF:dff8.port0
+Clock => Clock.IN9
+Reset => Reset.IN9
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1|D_FF:dff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1|D_FF:dff3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1|D_FF:dff4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1|D_FF:dff5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1|D_FF:dff6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1|D_FF:dff7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr1|D_FF:dff8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= D_FF:dff8.port0
+Clock => Clock.IN9
+Reset => Reset.IN9
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2|D_FF:dff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2|D_FF:dff3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2|D_FF:dff4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2|D_FF:dff5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2|D_FF:dff6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2|D_FF:dff7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|LFSR_9b:lfsr2|D_FF:dff8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder
+C[0] <= C[0].DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= C[1].DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= C[2].DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= C[3].DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= C[4].DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= C[5].DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= C[6].DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= C[7].DB_MAX_OUTPUT_PORT_TYPE
+C[8] <= C[8].DB_MAX_OUTPUT_PORT_TYPE
+C[9] <= full_adder:FA9.port0
+S[0] <= full_adder:FA0.port1
+S[1] <= full_adder:FA1.port1
+S[2] <= full_adder:FA2.port1
+S[3] <= full_adder:FA3.port1
+S[4] <= full_adder:FA4.port1
+S[5] <= full_adder:FA5.port1
+S[6] <= full_adder:FA6.port1
+S[7] <= full_adder:FA7.port1
+S[8] <= full_adder:FA8.port1
+S[9] <= full_adder:FA9.port1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA0
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA0|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA0|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA1
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA1|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA1|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA2
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA2|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA2|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA3
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA3|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA3|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA4
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA4|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA4|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA5
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA5|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA5|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA6
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA6|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA6|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA7
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA7|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA7|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA8
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA8|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA8|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA9
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA9|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_0:r0|ten_bit_adder:adder|full_adder:FA9|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1
+press <= press~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Clock => Clock.IN2
+Reset => Reset.IN2
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr1
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= D_FF:dff7.port0
+Clock => Clock.IN8
+Reset => Reset.IN8
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr1|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr1|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr1|D_FF:dff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr1|D_FF:dff3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr1|D_FF:dff4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr1|D_FF:dff5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr1|D_FF:dff6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr1|D_FF:dff7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr2
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= D_FF:dff7.port0
+Clock => Clock.IN8
+Reset => Reset.IN8
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr2|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr2|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr2|D_FF:dff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr2|D_FF:dff3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr2|D_FF:dff4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr2|D_FF:dff5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr2|D_FF:dff6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|LFSR_8b:lfsr2|D_FF:dff7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder
+C[0] <= C[0].DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= C[1].DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= C[2].DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= C[3].DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= C[4].DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= C[5].DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= C[6].DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= C[7].DB_MAX_OUTPUT_PORT_TYPE
+C[8] <= C[8].DB_MAX_OUTPUT_PORT_TYPE
+C[9] <= full_adder:FA9.port0
+S[0] <= full_adder:FA0.port1
+S[1] <= full_adder:FA1.port1
+S[2] <= full_adder:FA2.port1
+S[3] <= full_adder:FA3.port1
+S[4] <= full_adder:FA4.port1
+S[5] <= full_adder:FA5.port1
+S[6] <= full_adder:FA6.port1
+S[7] <= full_adder:FA7.port1
+S[8] <= full_adder:FA8.port1
+S[9] <= full_adder:FA9.port1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA0
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA0|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA0|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA1
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA1|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA1|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA2
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA2|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA2|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA3
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA3|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA3|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA4
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA4|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA4|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA5
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA5|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA5|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA6
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA6|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA6|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA7
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA7|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA7|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA8
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA8|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA8|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA9
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA9|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_1:r1|ten_bit_adder:adder|full_adder:FA9|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2
+press <= press~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Clock => Clock.IN2
+Reset => Reset.IN2
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr1
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= D_FF:dff6.port0
+Clock => Clock.IN7
+Reset => Reset.IN7
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr1|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr1|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr1|D_FF:dff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr1|D_FF:dff3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr1|D_FF:dff4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr1|D_FF:dff5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr1|D_FF:dff6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr2
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= D_FF:dff6.port0
+Clock => Clock.IN7
+Reset => Reset.IN7
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr2|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr2|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr2|D_FF:dff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr2|D_FF:dff3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr2|D_FF:dff4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr2|D_FF:dff5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|LFSR_7b:lfsr2|D_FF:dff6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder
+C[0] <= C[0].DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= C[1].DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= C[2].DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= C[3].DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= C[4].DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= C[5].DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= C[6].DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= C[7].DB_MAX_OUTPUT_PORT_TYPE
+C[8] <= C[8].DB_MAX_OUTPUT_PORT_TYPE
+C[9] <= full_adder:FA9.port0
+S[0] <= full_adder:FA0.port1
+S[1] <= full_adder:FA1.port1
+S[2] <= full_adder:FA2.port1
+S[3] <= full_adder:FA3.port1
+S[4] <= full_adder:FA4.port1
+S[5] <= full_adder:FA5.port1
+S[6] <= full_adder:FA6.port1
+S[7] <= full_adder:FA7.port1
+S[8] <= full_adder:FA8.port1
+S[9] <= full_adder:FA9.port1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA0
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA0|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA0|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA1
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA1|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA1|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA2
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA2|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA2|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA3
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA3|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA3|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA4
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA4|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA4|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA5
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA5|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA5|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA6
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA6|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA6|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA7
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA7|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA7|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA8
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA8|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA8|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA9
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA9|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_2:r2|ten_bit_adder:adder|full_adder:FA9|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3
+press <= press~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Clock => Clock.IN2
+Reset => Reset.IN2
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= D_FF:dff9.port0
+Clock => Clock.IN10
+Reset => Reset.IN10
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr1|D_FF:dff9
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= D_FF:dff9.port0
+Clock => Clock.IN10
+Reset => Reset.IN10
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|LFSR_10b:lfsr2|D_FF:dff9
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder
+C[0] <= C[0].DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= C[1].DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= C[2].DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= C[3].DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= C[4].DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= C[5].DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= C[6].DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= C[7].DB_MAX_OUTPUT_PORT_TYPE
+C[8] <= C[8].DB_MAX_OUTPUT_PORT_TYPE
+C[9] <= full_adder:FA9.port0
+S[0] <= full_adder:FA0.port1
+S[1] <= full_adder:FA1.port1
+S[2] <= full_adder:FA2.port1
+S[3] <= full_adder:FA3.port1
+S[4] <= full_adder:FA4.port1
+S[5] <= full_adder:FA5.port1
+S[6] <= full_adder:FA6.port1
+S[7] <= full_adder:FA7.port1
+S[8] <= full_adder:FA8.port1
+S[9] <= full_adder:FA9.port1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA0
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA0|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA0|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA1
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA1|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA1|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA2
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA2|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA2|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA3
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA3|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA3|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA4
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA4|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA4|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA5
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA5|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA5|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA6
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA6|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA6|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA7
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA7|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA7|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA8
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA8|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA8|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA9
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= half_adder:second.port1
+A => A.IN1
+B => B.IN1
+Ci => Ci.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA9|half_adder:first
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|random_3:r3|ten_bit_adder:adder|full_adder:FA9|half_adder:second
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+
+
+|dancedance|bank:b0
+Clock => Clock.IN5
+Reset => Reset.IN5
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+LED[0] <= LED[0].DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= LED[1].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= LED[2].DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= LED[3].DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= LED[4].DB_MAX_OUTPUT_PORT_TYPE
+Ren => Ren.IN1
+pt[0] <= score:sc.port0
+pt[1] <= score:sc.port0
+pt[2] <= score:sc.port0
+pt[3] <= score:sc.port0
+
+
+|dancedance|bank:b0|score:sc
+select[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+select[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+select[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+select[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+pt_0[0] => WideOr0.IN0
+pt_0[1] => WideOr1.IN0
+pt_0[2] => WideOr2.IN0
+pt_0[3] => WideOr3.IN0
+pt_1[0] => WideOr0.IN1
+pt_1[1] => WideOr1.IN1
+pt_1[2] => WideOr2.IN1
+pt_1[3] => WideOr3.IN1
+pt_2[0] => WideOr0.IN2
+pt_2[1] => WideOr1.IN2
+pt_2[2] => WideOr2.IN2
+pt_2[3] => WideOr3.IN2
+pt_3[0] => WideOr0.IN3
+pt_3[1] => WideOr1.IN3
+pt_3[2] => WideOr2.IN3
+pt_3[3] => WideOr3.IN3
+pt_4[0] => WideOr0.IN4
+pt_4[1] => WideOr1.IN4
+pt_4[2] => WideOr2.IN4
+pt_4[3] => WideOr3.IN4
+
+
+|dancedance|bank:b0|encode_top:et
+L[0] => O.IN0
+L[1] => O.IN0
+L[1] => O.IN1
+L[2] => O.IN1
+L[2] => O.IN1
+L[3] => O.IN0
+L[3] => O.IN0
+L[4] => O.IN1
+L[4] => O.IN1
+L[4] => O.IN1
+O[0] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|bank:b0|L0:light_0
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[1] => Equal0.IN1
+TOP_POS[1] => Equal1.IN1
+TOP_POS[1] => Equal2.IN1
+TOP_POS[2] => Equal0.IN0
+TOP_POS[2] => Equal1.IN0
+TOP_POS[2] => Equal2.IN0
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= D_FF:dff1.port0
+pt[3] <= D_FF:dff1.port0
+
+
+|dancedance|bank:b0|L0:light_0|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b0|L0:light_0|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b0|L1:light_1
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN0
+TOP_POS[0] => Equal1.IN0
+TOP_POS[0] => Equal2.IN0
+TOP_POS[0] => Equal3.IN0
+TOP_POS[1] => Equal0.IN2
+TOP_POS[1] => Equal1.IN2
+TOP_POS[1] => Equal2.IN2
+TOP_POS[1] => Equal3.IN2
+TOP_POS[2] => Equal0.IN1
+TOP_POS[2] => Equal1.IN1
+TOP_POS[2] => Equal2.IN1
+TOP_POS[2] => Equal3.IN1
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= D_FF:dff1.port0
+pt[3] <= D_FF:dff1.port0
+
+
+|dancedance|bank:b0|L1:light_1|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b0|L1:light_1|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b0|L2:light_2
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[0] => Equal3.IN2
+TOP_POS[1] => Equal0.IN0
+TOP_POS[1] => Equal1.IN0
+TOP_POS[1] => Equal2.IN0
+TOP_POS[1] => Equal3.IN0
+TOP_POS[2] => Equal0.IN1
+TOP_POS[2] => Equal1.IN1
+TOP_POS[2] => Equal2.IN1
+TOP_POS[2] => Equal3.IN1
+lighton <= D_FF:dff0.port0
+pt[0] <= D_FF:dff1.port0
+pt[1] <= <GND>
+pt[2] <= <GND>
+pt[3] <= <GND>
+
+
+|dancedance|bank:b0|L2:light_2|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b0|L2:light_2|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b0|L3:light_3
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN1
+TOP_POS[0] => Equal1.IN1
+TOP_POS[0] => Equal2.IN1
+TOP_POS[0] => Equal3.IN1
+TOP_POS[1] => Equal0.IN0
+TOP_POS[1] => Equal1.IN0
+TOP_POS[1] => Equal2.IN0
+TOP_POS[1] => Equal3.IN0
+TOP_POS[2] => Equal0.IN2
+TOP_POS[2] => Equal1.IN2
+TOP_POS[2] => Equal2.IN2
+TOP_POS[2] => Equal3.IN2
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= <GND>
+pt[3] <= <GND>
+
+
+|dancedance|bank:b0|L3:light_3|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b0|L3:light_3|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b0|L4:light_4
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[0] => Equal3.IN2
+TOP_POS[0] => Equal4.IN2
+TOP_POS[0] => Equal5.IN2
+TOP_POS[1] => Equal0.IN1
+TOP_POS[1] => Equal1.IN1
+TOP_POS[1] => Equal2.IN1
+TOP_POS[1] => Equal3.IN1
+TOP_POS[1] => Equal4.IN1
+TOP_POS[1] => Equal5.IN1
+TOP_POS[2] => Equal0.IN0
+TOP_POS[2] => Equal1.IN0
+TOP_POS[2] => Equal2.IN0
+TOP_POS[2] => Equal3.IN0
+TOP_POS[2] => Equal4.IN0
+TOP_POS[2] => Equal5.IN0
+lighton <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|bank:b0|L4:light_4|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b0|L4:light_4|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1
+Clock => Clock.IN5
+Reset => Reset.IN5
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+LED[0] <= LED[0].DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= LED[1].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= LED[2].DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= LED[3].DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= LED[4].DB_MAX_OUTPUT_PORT_TYPE
+Ren => Ren.IN1
+pt[0] <= score:sc.port0
+pt[1] <= score:sc.port0
+pt[2] <= score:sc.port0
+pt[3] <= score:sc.port0
+
+
+|dancedance|bank:b1|score:sc
+select[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+select[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+select[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+select[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+pt_0[0] => WideOr0.IN0
+pt_0[1] => WideOr1.IN0
+pt_0[2] => WideOr2.IN0
+pt_0[3] => WideOr3.IN0
+pt_1[0] => WideOr0.IN1
+pt_1[1] => WideOr1.IN1
+pt_1[2] => WideOr2.IN1
+pt_1[3] => WideOr3.IN1
+pt_2[0] => WideOr0.IN2
+pt_2[1] => WideOr1.IN2
+pt_2[2] => WideOr2.IN2
+pt_2[3] => WideOr3.IN2
+pt_3[0] => WideOr0.IN3
+pt_3[1] => WideOr1.IN3
+pt_3[2] => WideOr2.IN3
+pt_3[3] => WideOr3.IN3
+pt_4[0] => WideOr0.IN4
+pt_4[1] => WideOr1.IN4
+pt_4[2] => WideOr2.IN4
+pt_4[3] => WideOr3.IN4
+
+
+|dancedance|bank:b1|encode_top:et
+L[0] => O.IN0
+L[1] => O.IN0
+L[1] => O.IN1
+L[2] => O.IN1
+L[2] => O.IN1
+L[3] => O.IN0
+L[3] => O.IN0
+L[4] => O.IN1
+L[4] => O.IN1
+L[4] => O.IN1
+O[0] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|bank:b1|L0:light_0
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[1] => Equal0.IN1
+TOP_POS[1] => Equal1.IN1
+TOP_POS[1] => Equal2.IN1
+TOP_POS[2] => Equal0.IN0
+TOP_POS[2] => Equal1.IN0
+TOP_POS[2] => Equal2.IN0
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= D_FF:dff1.port0
+pt[3] <= D_FF:dff1.port0
+
+
+|dancedance|bank:b1|L0:light_0|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1|L0:light_0|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1|L1:light_1
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN0
+TOP_POS[0] => Equal1.IN0
+TOP_POS[0] => Equal2.IN0
+TOP_POS[0] => Equal3.IN0
+TOP_POS[1] => Equal0.IN2
+TOP_POS[1] => Equal1.IN2
+TOP_POS[1] => Equal2.IN2
+TOP_POS[1] => Equal3.IN2
+TOP_POS[2] => Equal0.IN1
+TOP_POS[2] => Equal1.IN1
+TOP_POS[2] => Equal2.IN1
+TOP_POS[2] => Equal3.IN1
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= D_FF:dff1.port0
+pt[3] <= D_FF:dff1.port0
+
+
+|dancedance|bank:b1|L1:light_1|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1|L1:light_1|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1|L2:light_2
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[0] => Equal3.IN2
+TOP_POS[1] => Equal0.IN0
+TOP_POS[1] => Equal1.IN0
+TOP_POS[1] => Equal2.IN0
+TOP_POS[1] => Equal3.IN0
+TOP_POS[2] => Equal0.IN1
+TOP_POS[2] => Equal1.IN1
+TOP_POS[2] => Equal2.IN1
+TOP_POS[2] => Equal3.IN1
+lighton <= D_FF:dff0.port0
+pt[0] <= D_FF:dff1.port0
+pt[1] <= <GND>
+pt[2] <= <GND>
+pt[3] <= <GND>
+
+
+|dancedance|bank:b1|L2:light_2|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1|L2:light_2|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1|L3:light_3
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN1
+TOP_POS[0] => Equal1.IN1
+TOP_POS[0] => Equal2.IN1
+TOP_POS[0] => Equal3.IN1
+TOP_POS[1] => Equal0.IN0
+TOP_POS[1] => Equal1.IN0
+TOP_POS[1] => Equal2.IN0
+TOP_POS[1] => Equal3.IN0
+TOP_POS[2] => Equal0.IN2
+TOP_POS[2] => Equal1.IN2
+TOP_POS[2] => Equal2.IN2
+TOP_POS[2] => Equal3.IN2
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= <GND>
+pt[3] <= <GND>
+
+
+|dancedance|bank:b1|L3:light_3|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1|L3:light_3|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1|L4:light_4
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[0] => Equal3.IN2
+TOP_POS[0] => Equal4.IN2
+TOP_POS[0] => Equal5.IN2
+TOP_POS[1] => Equal0.IN1
+TOP_POS[1] => Equal1.IN1
+TOP_POS[1] => Equal2.IN1
+TOP_POS[1] => Equal3.IN1
+TOP_POS[1] => Equal4.IN1
+TOP_POS[1] => Equal5.IN1
+TOP_POS[2] => Equal0.IN0
+TOP_POS[2] => Equal1.IN0
+TOP_POS[2] => Equal2.IN0
+TOP_POS[2] => Equal3.IN0
+TOP_POS[2] => Equal4.IN0
+TOP_POS[2] => Equal5.IN0
+lighton <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|bank:b1|L4:light_4|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b1|L4:light_4|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2
+Clock => Clock.IN5
+Reset => Reset.IN5
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+LED[0] <= LED[0].DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= LED[1].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= LED[2].DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= LED[3].DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= LED[4].DB_MAX_OUTPUT_PORT_TYPE
+Ren => Ren.IN1
+pt[0] <= score:sc.port0
+pt[1] <= score:sc.port0
+pt[2] <= score:sc.port0
+pt[3] <= score:sc.port0
+
+
+|dancedance|bank:b2|score:sc
+select[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+select[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+select[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+select[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+pt_0[0] => WideOr0.IN0
+pt_0[1] => WideOr1.IN0
+pt_0[2] => WideOr2.IN0
+pt_0[3] => WideOr3.IN0
+pt_1[0] => WideOr0.IN1
+pt_1[1] => WideOr1.IN1
+pt_1[2] => WideOr2.IN1
+pt_1[3] => WideOr3.IN1
+pt_2[0] => WideOr0.IN2
+pt_2[1] => WideOr1.IN2
+pt_2[2] => WideOr2.IN2
+pt_2[3] => WideOr3.IN2
+pt_3[0] => WideOr0.IN3
+pt_3[1] => WideOr1.IN3
+pt_3[2] => WideOr2.IN3
+pt_3[3] => WideOr3.IN3
+pt_4[0] => WideOr0.IN4
+pt_4[1] => WideOr1.IN4
+pt_4[2] => WideOr2.IN4
+pt_4[3] => WideOr3.IN4
+
+
+|dancedance|bank:b2|encode_top:et
+L[0] => O.IN0
+L[1] => O.IN0
+L[1] => O.IN1
+L[2] => O.IN1
+L[2] => O.IN1
+L[3] => O.IN0
+L[3] => O.IN0
+L[4] => O.IN1
+L[4] => O.IN1
+L[4] => O.IN1
+O[0] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|bank:b2|L0:light_0
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[1] => Equal0.IN1
+TOP_POS[1] => Equal1.IN1
+TOP_POS[1] => Equal2.IN1
+TOP_POS[2] => Equal0.IN0
+TOP_POS[2] => Equal1.IN0
+TOP_POS[2] => Equal2.IN0
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= D_FF:dff1.port0
+pt[3] <= D_FF:dff1.port0
+
+
+|dancedance|bank:b2|L0:light_0|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2|L0:light_0|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2|L1:light_1
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN0
+TOP_POS[0] => Equal1.IN0
+TOP_POS[0] => Equal2.IN0
+TOP_POS[0] => Equal3.IN0
+TOP_POS[1] => Equal0.IN2
+TOP_POS[1] => Equal1.IN2
+TOP_POS[1] => Equal2.IN2
+TOP_POS[1] => Equal3.IN2
+TOP_POS[2] => Equal0.IN1
+TOP_POS[2] => Equal1.IN1
+TOP_POS[2] => Equal2.IN1
+TOP_POS[2] => Equal3.IN1
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= D_FF:dff1.port0
+pt[3] <= D_FF:dff1.port0
+
+
+|dancedance|bank:b2|L1:light_1|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2|L1:light_1|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2|L2:light_2
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[0] => Equal3.IN2
+TOP_POS[1] => Equal0.IN0
+TOP_POS[1] => Equal1.IN0
+TOP_POS[1] => Equal2.IN0
+TOP_POS[1] => Equal3.IN0
+TOP_POS[2] => Equal0.IN1
+TOP_POS[2] => Equal1.IN1
+TOP_POS[2] => Equal2.IN1
+TOP_POS[2] => Equal3.IN1
+lighton <= D_FF:dff0.port0
+pt[0] <= D_FF:dff1.port0
+pt[1] <= <GND>
+pt[2] <= <GND>
+pt[3] <= <GND>
+
+
+|dancedance|bank:b2|L2:light_2|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2|L2:light_2|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2|L3:light_3
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN1
+TOP_POS[0] => Equal1.IN1
+TOP_POS[0] => Equal2.IN1
+TOP_POS[0] => Equal3.IN1
+TOP_POS[1] => Equal0.IN0
+TOP_POS[1] => Equal1.IN0
+TOP_POS[1] => Equal2.IN0
+TOP_POS[1] => Equal3.IN0
+TOP_POS[2] => Equal0.IN2
+TOP_POS[2] => Equal1.IN2
+TOP_POS[2] => Equal2.IN2
+TOP_POS[2] => Equal3.IN2
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= <GND>
+pt[3] <= <GND>
+
+
+|dancedance|bank:b2|L3:light_3|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2|L3:light_3|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2|L4:light_4
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[0] => Equal3.IN2
+TOP_POS[0] => Equal4.IN2
+TOP_POS[0] => Equal5.IN2
+TOP_POS[1] => Equal0.IN1
+TOP_POS[1] => Equal1.IN1
+TOP_POS[1] => Equal2.IN1
+TOP_POS[1] => Equal3.IN1
+TOP_POS[1] => Equal4.IN1
+TOP_POS[1] => Equal5.IN1
+TOP_POS[2] => Equal0.IN0
+TOP_POS[2] => Equal1.IN0
+TOP_POS[2] => Equal2.IN0
+TOP_POS[2] => Equal3.IN0
+TOP_POS[2] => Equal4.IN0
+TOP_POS[2] => Equal5.IN0
+lighton <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|bank:b2|L4:light_4|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b2|L4:light_4|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3
+Clock => Clock.IN5
+Reset => Reset.IN5
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+KEY => _.IN1
+LED[0] <= LED[0].DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= LED[1].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= LED[2].DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= LED[3].DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= LED[4].DB_MAX_OUTPUT_PORT_TYPE
+Ren => Ren.IN1
+pt[0] <= score:sc.port0
+pt[1] <= score:sc.port0
+pt[2] <= score:sc.port0
+pt[3] <= score:sc.port0
+
+
+|dancedance|bank:b3|score:sc
+select[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+select[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+select[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+select[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+pt_0[0] => WideOr0.IN0
+pt_0[1] => WideOr1.IN0
+pt_0[2] => WideOr2.IN0
+pt_0[3] => WideOr3.IN0
+pt_1[0] => WideOr0.IN1
+pt_1[1] => WideOr1.IN1
+pt_1[2] => WideOr2.IN1
+pt_1[3] => WideOr3.IN1
+pt_2[0] => WideOr0.IN2
+pt_2[1] => WideOr1.IN2
+pt_2[2] => WideOr2.IN2
+pt_2[3] => WideOr3.IN2
+pt_3[0] => WideOr0.IN3
+pt_3[1] => WideOr1.IN3
+pt_3[2] => WideOr2.IN3
+pt_3[3] => WideOr3.IN3
+pt_4[0] => WideOr0.IN4
+pt_4[1] => WideOr1.IN4
+pt_4[2] => WideOr2.IN4
+pt_4[3] => WideOr3.IN4
+
+
+|dancedance|bank:b3|encode_top:et
+L[0] => O.IN0
+L[1] => O.IN0
+L[1] => O.IN1
+L[2] => O.IN1
+L[2] => O.IN1
+L[3] => O.IN0
+L[3] => O.IN0
+L[4] => O.IN1
+L[4] => O.IN1
+L[4] => O.IN1
+O[0] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|bank:b3|L0:light_0
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[1] => Equal0.IN1
+TOP_POS[1] => Equal1.IN1
+TOP_POS[1] => Equal2.IN1
+TOP_POS[2] => Equal0.IN0
+TOP_POS[2] => Equal1.IN0
+TOP_POS[2] => Equal2.IN0
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= D_FF:dff1.port0
+pt[3] <= D_FF:dff1.port0
+
+
+|dancedance|bank:b3|L0:light_0|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3|L0:light_0|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3|L1:light_1
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN0
+TOP_POS[0] => Equal1.IN0
+TOP_POS[0] => Equal2.IN0
+TOP_POS[0] => Equal3.IN0
+TOP_POS[1] => Equal0.IN2
+TOP_POS[1] => Equal1.IN2
+TOP_POS[1] => Equal2.IN2
+TOP_POS[1] => Equal3.IN2
+TOP_POS[2] => Equal0.IN1
+TOP_POS[2] => Equal1.IN1
+TOP_POS[2] => Equal2.IN1
+TOP_POS[2] => Equal3.IN1
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= D_FF:dff1.port0
+pt[3] <= D_FF:dff1.port0
+
+
+|dancedance|bank:b3|L1:light_1|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3|L1:light_1|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3|L2:light_2
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[0] => Equal3.IN2
+TOP_POS[1] => Equal0.IN0
+TOP_POS[1] => Equal1.IN0
+TOP_POS[1] => Equal2.IN0
+TOP_POS[1] => Equal3.IN0
+TOP_POS[2] => Equal0.IN1
+TOP_POS[2] => Equal1.IN1
+TOP_POS[2] => Equal2.IN1
+TOP_POS[2] => Equal3.IN1
+lighton <= D_FF:dff0.port0
+pt[0] <= D_FF:dff1.port0
+pt[1] <= <GND>
+pt[2] <= <GND>
+pt[3] <= <GND>
+
+
+|dancedance|bank:b3|L2:light_2|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3|L2:light_2|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3|L3:light_3
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN1
+TOP_POS[0] => Equal1.IN1
+TOP_POS[0] => Equal2.IN1
+TOP_POS[0] => Equal3.IN1
+TOP_POS[1] => Equal0.IN0
+TOP_POS[1] => Equal1.IN0
+TOP_POS[1] => Equal2.IN0
+TOP_POS[1] => Equal3.IN0
+TOP_POS[2] => Equal0.IN2
+TOP_POS[2] => Equal1.IN2
+TOP_POS[2] => Equal2.IN2
+TOP_POS[2] => Equal3.IN2
+lighton <= D_FF:dff0.port0
+pt[0] <= <GND>
+pt[1] <= D_FF:dff1.port0
+pt[2] <= <GND>
+pt[3] <= <GND>
+
+
+|dancedance|bank:b3|L3:light_3|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3|L3:light_3|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3|L4:light_4
+Clock => Clock.IN2
+Reset => Reset.IN2
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+BL => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+KEY => always0.IN1
+TOP_POS[0] => Equal0.IN2
+TOP_POS[0] => Equal1.IN2
+TOP_POS[0] => Equal2.IN2
+TOP_POS[0] => Equal3.IN2
+TOP_POS[0] => Equal4.IN2
+TOP_POS[0] => Equal5.IN2
+TOP_POS[1] => Equal0.IN1
+TOP_POS[1] => Equal1.IN1
+TOP_POS[1] => Equal2.IN1
+TOP_POS[1] => Equal3.IN1
+TOP_POS[1] => Equal4.IN1
+TOP_POS[1] => Equal5.IN1
+TOP_POS[2] => Equal0.IN0
+TOP_POS[2] => Equal1.IN0
+TOP_POS[2] => Equal2.IN0
+TOP_POS[2] => Equal3.IN0
+TOP_POS[2] => Equal4.IN0
+TOP_POS[2] => Equal5.IN0
+lighton <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+pt[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|bank:b3|L4:light_4|D_FF:dff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|bank:b3|L4:light_4|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|score_keep:sk
+Clock => Clock.IN1
+Reset => Reset.IN1
+pt_0[0] => pt_0[0].IN1
+pt_0[1] => pt_0[1].IN1
+pt_0[2] => pt_0[2].IN1
+pt_0[3] => pt_0[3].IN1
+pt_1[0] => pt_1[0].IN1
+pt_1[1] => pt_1[1].IN1
+pt_1[2] => pt_1[2].IN1
+pt_1[3] => pt_1[3].IN1
+pt_2[0] => pt_2[0].IN1
+pt_2[1] => pt_2[1].IN1
+pt_2[2] => pt_2[2].IN1
+pt_2[3] => pt_2[3].IN1
+pt_3[0] => pt_3[0].IN1
+pt_3[1] => pt_3[1].IN1
+pt_3[2] => pt_3[2].IN1
+pt_3[3] => pt_3[3].IN1
+hex1[0] <= display:comb_3.port2
+hex1[1] <= display:comb_3.port2
+hex1[2] <= display:comb_3.port2
+hex1[3] <= display:comb_3.port2
+hex1[4] <= display:comb_3.port2
+hex1[5] <= display:comb_3.port2
+hex1[6] <= display:comb_3.port2
+hex0[0] <= display:comb_3.port3
+hex0[1] <= display:comb_3.port3
+hex0[2] <= display:comb_3.port3
+hex0[3] <= display:comb_3.port3
+hex0[4] <= display:comb_3.port3
+hex0[5] <= display:comb_3.port3
+hex0[6] <= display:comb_3.port3
+hex3[0] <= display:comb_3.port4
+hex3[1] <= display:comb_3.port4
+hex3[2] <= display:comb_3.port4
+hex3[3] <= display:comb_3.port4
+hex3[4] <= display:comb_3.port4
+hex3[5] <= display:comb_3.port4
+hex3[6] <= display:comb_3.port4
+hex2[0] <= display:comb_3.port5
+hex2[1] <= display:comb_3.port5
+hex2[2] <= display:comb_3.port5
+hex2[3] <= display:comb_3.port5
+hex2[4] <= display:comb_3.port5
+hex2[5] <= display:comb_3.port5
+hex2[6] <= display:comb_3.port5
+
+
+|dancedance|score_keep:sk|score_counter:sc
+Clock => maxcount[0]~reg0.CLK
+Clock => maxcount[1]~reg0.CLK
+Clock => maxcount[2]~reg0.CLK
+Clock => maxcount[3]~reg0.CLK
+Clock => maxcount[4]~reg0.CLK
+Clock => maxcount[5]~reg0.CLK
+Clock => maxcount[6]~reg0.CLK
+Clock => count[0]~reg0.CLK
+Clock => count[1]~reg0.CLK
+Clock => count[2]~reg0.CLK
+Clock => count[3]~reg0.CLK
+Clock => count[4]~reg0.CLK
+Clock => count[5]~reg0.CLK
+Clock => count[6]~reg0.CLK
+Reset => maxcount[0]~reg0.ACLR
+Reset => maxcount[1]~reg0.ACLR
+Reset => maxcount[2]~reg0.ACLR
+Reset => maxcount[3]~reg0.ACLR
+Reset => maxcount[4]~reg0.ACLR
+Reset => maxcount[5]~reg0.ACLR
+Reset => maxcount[6]~reg0.ACLR
+Reset => count[0]~reg0.ACLR
+Reset => count[1]~reg0.ACLR
+Reset => count[2]~reg0.ACLR
+Reset => count[3]~reg0.ACLR
+Reset => count[4]~reg0.ACLR
+Reset => count[5]~reg0.ACLR
+Reset => count[6]~reg0.ACLR
+pt_0[0] => ~NO_FANOUT~
+pt_0[1] => ~NO_FANOUT~
+pt_0[2] => ~NO_FANOUT~
+pt_0[3] => ~NO_FANOUT~
+pt_1[0] => ~NO_FANOUT~
+pt_1[1] => ~NO_FANOUT~
+pt_1[2] => ~NO_FANOUT~
+pt_1[3] => ~NO_FANOUT~
+pt_2[0] => ~NO_FANOUT~
+pt_2[1] => ~NO_FANOUT~
+pt_2[2] => ~NO_FANOUT~
+pt_2[3] => ~NO_FANOUT~
+pt_3[0] => Add1.IN7
+pt_3[0] => Equal0.IN3
+pt_3[1] => Add1.IN6
+pt_3[1] => Equal0.IN2
+pt_3[2] => Add1.IN5
+pt_3[2] => Equal0.IN1
+pt_3[3] => Add1.IN4
+pt_3[3] => Equal0.IN0
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+maxcount[0] <= maxcount[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+maxcount[1] <= maxcount[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+maxcount[2] <= maxcount[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+maxcount[3] <= maxcount[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+maxcount[4] <= maxcount[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+maxcount[5] <= maxcount[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+maxcount[6] <= maxcount[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|score_keep:sk|display:comb_3
+count[0] => Mod0.IN10
+count[0] => Div0.IN10
+count[1] => Mod0.IN9
+count[1] => Div0.IN9
+count[2] => Mod0.IN8
+count[2] => Div0.IN8
+count[3] => Mod0.IN7
+count[3] => Div0.IN7
+count[4] => Mod0.IN6
+count[4] => Div0.IN6
+count[5] => Mod0.IN5
+count[5] => Div0.IN5
+count[6] => Mod0.IN4
+count[6] => Div0.IN4
+maxcount[0] => Mod1.IN10
+maxcount[0] => Div1.IN10
+maxcount[1] => Mod1.IN9
+maxcount[1] => Div1.IN9
+maxcount[2] => Mod1.IN8
+maxcount[2] => Div1.IN8
+maxcount[3] => Mod1.IN7
+maxcount[3] => Div1.IN7
+maxcount[4] => Mod1.IN6
+maxcount[4] => Div1.IN6
+maxcount[5] => Mod1.IN5
+maxcount[5] => Div1.IN5
+maxcount[6] => Mod1.IN4
+maxcount[6] => Div1.IN4
+hex1[0] <= seg7:td.port1
+hex1[1] <= seg7:td.port1
+hex1[2] <= seg7:td.port1
+hex1[3] <= seg7:td.port1
+hex1[4] <= seg7:td.port1
+hex1[5] <= seg7:td.port1
+hex1[6] <= seg7:td.port1
+hex0[0] <= seg7:ud.port1
+hex0[1] <= seg7:ud.port1
+hex0[2] <= seg7:ud.port1
+hex0[3] <= seg7:ud.port1
+hex0[4] <= seg7:ud.port1
+hex0[5] <= seg7:ud.port1
+hex0[6] <= seg7:ud.port1
+hex3[0] <= seg7:tmd.port1
+hex3[1] <= seg7:tmd.port1
+hex3[2] <= seg7:tmd.port1
+hex3[3] <= seg7:tmd.port1
+hex3[4] <= seg7:tmd.port1
+hex3[5] <= seg7:tmd.port1
+hex3[6] <= seg7:tmd.port1
+hex2[0] <= seg7:umd.port1
+hex2[1] <= seg7:umd.port1
+hex2[2] <= seg7:umd.port1
+hex2[3] <= seg7:umd.port1
+hex2[4] <= seg7:umd.port1
+hex2[5] <= seg7:umd.port1
+hex2[6] <= seg7:umd.port1
+
+
+|dancedance|score_keep:sk|display:comb_3|seg7:ud
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+leds[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+leds[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|score_keep:sk|display:comb_3|seg7:td
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+leds[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+leds[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|score_keep:sk|display:comb_3|seg7:umd
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+leds[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+leds[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|score_keep:sk|display:comb_3|seg7:tmd
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+leds[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+leds[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|counter_3b:ct
+B[0] <= D_FF:dff1.port0
+B[1] <= D_FF:dff2.port0
+B[2] <= D_FF:dff3.port0
+Clock => Clock.IN3
+reset => reset.IN3
+
+
+|dancedance|counter_3b:ct|D_FF:dff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|counter_3b:ct|D_FF:dff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|counter_3b:ct|D_FF:dff3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+reset => q~reg0.ACLR
+clk => q~reg0.CLK
+
+
+|dancedance|decoder3to8:decoder
+C[0] => Decoder0.IN2
+C[1] => Decoder0.IN1
+C[2] => Decoder0.IN0
+D[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+D[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+D[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+D[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|mux8to1:col_0_red
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+D4 => Mux0.IN4
+D5 => Mux0.IN5
+D6 => Mux0.IN6
+D7 => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|mux8to1:col_0_green
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+D4 => Mux0.IN4
+D5 => Mux0.IN5
+D6 => Mux0.IN6
+D7 => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|mux8to1:col_1_red
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+D4 => Mux0.IN4
+D5 => Mux0.IN5
+D6 => Mux0.IN6
+D7 => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|mux8to1:col_1_green
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+D4 => Mux0.IN4
+D5 => Mux0.IN5
+D6 => Mux0.IN6
+D7 => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|mux8to1:col_2_red
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+D4 => Mux0.IN4
+D5 => Mux0.IN5
+D6 => Mux0.IN6
+D7 => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|mux8to1:col_2_green
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+D4 => Mux0.IN4
+D5 => Mux0.IN5
+D6 => Mux0.IN6
+D7 => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|mux8to1:col_3_red
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+D4 => Mux0.IN4
+D5 => Mux0.IN5
+D6 => Mux0.IN6
+D7 => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dancedance|mux8to1:col_3_green
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+D4 => Mux0.IN4
+D5 => Mux0.IN5
+D6 => Mux0.IN6
+D7 => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
